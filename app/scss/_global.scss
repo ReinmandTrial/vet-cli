@@ -1,6 +1,11 @@
 html,
 body {
 	height: 100%;
+	font-family: 'Manrope';
+    font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 28px;
 }
 
 .wrapper {
@@ -11,18 +16,16 @@ body {
 
 .main {
 	flex: 1 0 auto;
+	padding-left: 300px;
+	position: relative;
 }
 .footer {
 	flex: 0 0 auto;
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1142px;
   margin: 0 auto;
   padding: 0 15px;
 }
-
-
-
-
 

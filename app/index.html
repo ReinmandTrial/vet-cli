@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Глвная</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,23 +15,84 @@
 
     <!-- HEADER start  -->
     <header class="header">
-      <i class="icon icon-arrow-right"></i>
-      <i class="icon icon-angle-right"></i>
-      <i class="icon icon-angle-left"></i>
-      <i class="icon icon-search"></i>
-      <i class="icon icon-angle-down"></i>
+
+      <div class="logo">
+        <a class="logo__img" href="#">
+          <img src="images/logo.png" alt="logo">
+        </a>
+      </div>
+
+      <div class="search">
+        <span class="icon icon-search"></span>
+        <input class="search__input" placeholder="Поиск по сайту" type="text">
+      </div>
+      <div class="address">
+        <div class="address__item">
+          <div class="address__title">Москва, Кулакова, 10 к. 1</div>
+          <div class="address__subtitle">Район Строгино м. Строгино, Мякинино</div>
+        </div>
+        <div class="address__item">
+          <div class="address__title">Москва, Загородное ш., 4 к. 2</div>
+          <div class="address__subtitle">Донской район м. Крымская, Верхние Котлы</div>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone__number h5">+7 (499) 110-23-03</div>
+        <a class="phone__button">Заказать звонок</a>
+      </div>
+
     </header>
-    <!-- HEADER end  -->
+    <!-- HEADER end  -->    
 
     <!-- MAIN start  -->
     <main class="main">
-      
+
+      <!-- SIDEBAR start  -->
+      <sidebar class="sidebar">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">Наши услуги</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Стоимость</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Сотрудники</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">График работы</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">О клинике <span class="icon icon-angle-down"></span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Полезное <span class="icon icon-angle-down"></span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <h3 class="sidebar__footer-title">Работаем для вас</h3>
+          <p class="sidebar__footer-description">ежедневно и круглосуточно</p>
+          <button class="btn btn-primary">Записаться на прием</button>
+        </div>  
+      </sidebar>
+      <!-- SIDEBAR end  -->
+
+      <!-- CONTENT start  -->
+      <div class="content">
+      </div>
+      <!-- CONTENT end -->
+
     </main>
     <!-- MAIN end -->
 
     <!-- FOOTER start  -->
     <footer class="footer">
-       
+       <div class="container">
+         <div class="footer__content">
+           <div class="footer__instagram">
+             <h3 class="footer__instagram-title">Подпишитесь, чтобы быть в курсе
+              всех акций и новостей</h3>
+             <a class="footer__instagram-img" href="#"><img src="images/logo-instagram.png" alt="inst"></a>
+           </div>
+           <div class="footer__text mini-text">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями ч.2 ст.437 Гражданского кодекса Российской Федерации. Для получения подробной информации о стоимости и сроках выполнения услуг, пожалуйста, обращайтесь к сотрудникам ветеринарного центра «ВетКэт».</div>
+         </div>
+         <div class="footer__copyright">
+          <span class="footer__copyright-info mini-text">© Ветеринарный центр «ВетКэт». Все права защищены. 2020</span>
+          <a class="footer__copyright-link mini-text" href="#">Политика конфиденциальности</a>
+         </div>
+       </div>
     </footer>
     <!-- FOOTER end -->
 
