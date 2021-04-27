@@ -109,9 +109,6 @@
 .menu {
     flex: 1 0 auto;
     padding: 52px 0px 0px 56px;
-    &__list {
-        
-    }
     &__item {
         color: $text2;
         font-size: 20px;
@@ -143,6 +140,7 @@
         font-size: 16px;
         line-height: 20px;
         margin-bottom: 16px;
+        font-weight: normal;
     }
 }
 
@@ -190,6 +188,47 @@
     }
     &__copyright-link {
         color: $accentDark;
+    }
+}
+
+.desctop {
+    background: $background1;
+    position: relative;
+    height: 656px;
+    &__content {
+        max-width: 712px;
+    }
+    &__title {
+        padding-top: 113px;
+        margin-bottom: 33px;
+    }
+    &__list {
+        margin-bottom: 174px;
+    }
+    &__item {
+        padding-left: 16px;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: calc(50% - 3px);
+            width: 6px;
+            height: 6px;
+            background: $accent;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
