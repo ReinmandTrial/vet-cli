@@ -29,3 +29,271 @@ body {
   padding: 0 15px;
 }
 
+.switch{
+	display: inline-block;
+	padding: 8px;
+	box-shadow: inset 0px 0px 3px rgba(13, 61, 46, 0.4);
+	border-radius: 20px;
+	background: $background2;
+	&__list{
+		display: flex;
+	}
+	&__item{
+		cursor: pointer;
+		background: transparent;
+		padding: 7px 20px 9px 20px;
+		font-size: 14px;
+		line-height: 24px;
+		color: $text3;
+		&.active{
+			background: $accent;
+			color: $white;
+			border-radius: 16px;
+			&:hover{
+				color: $white;
+			}
+		}
+		&:hover{
+			color: $accent;
+		}
+	}
+}
+
+.card{
+
+	&__service{
+		position: relative;
+		cursor: pointer;
+		border-radius: 8px;
+		background: $background1;
+		padding: 28px 32px;
+		width: 344px;
+		height: 240px;
+		&:hover{
+			transition: all .8s;
+			background: $accent;
+			.card{
+				&__service-title{
+					color: $white;
+				}
+				&__service-text{
+					color: $white;
+				}
+				&__service-more{
+					color: $white;
+				}
+			}
+		}
+	}
+	&__service-title{
+		color: $text1;
+		padding-bottom: 10px;
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+	&__service-text{
+		width: 280px;
+		color: $text2;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&__service-more{
+		display: flex;
+		align-items: center;
+		color: transparent;
+		position: absolute;
+		bottom: 25px;
+		right: 32px;
+		.icon{
+			margin-left: 8px;
+		}
+	}
+
+	&__animals{
+		width: 248px;
+		cursor: pointer;
+		&:hover{
+			.card{
+				&__animals-title{
+					color: $accent;
+				}
+				&__animals-date{
+					color: $accent;
+				}
+				&__hover{
+					transition: all .5;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__animals-img{
+		position: relative;
+		width: 248px;
+		height: 248px;
+		margin-bottom: 16px;
+		img{
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__animals-title{
+		padding-bottom: 12px;
+	}
+	&__animals-date{
+		
+	}
+
+
+
+	&__specialist{
+		cursor: pointer;
+		width: 344px;
+		&:hover{
+			.card{
+				&__specialist-title{
+					color: $accent;
+				}
+				&__specialist-text{
+					color: $accent;
+				}
+				&__hover{
+					transition: all .5;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__specialist-img{
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 400px;
+		margin-bottom: 16px;
+		border-radius: 8px;
+		img{
+			display: inline-block;
+			margin: 0 auto;
+		}
+	}
+	&__specialist-title{
+		color: $text1;
+		width: 207px;
+	}
+	&__specialist-text{
+		color: $text2;
+	}
+	&__hover{
+		display: flex;
+		align-items: flex-end;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		background: rgba(#192224, .2);
+	}
+	&__trick{
+		width: 100%;
+		border-radius: 8px;
+		background: $background1;
+		padding: 17px 24px;
+		font-size: 14px;
+		line-height: 16px;
+		color: $text1;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__trick-title{
+			display: inline-block;
+			font-weight: 700;
+			max-width: 90px;
+	}
+	&__trick-date{
+		display: inline-block;
+		position: relative;
+		padding: 0 6px;
+		font-weight: 400;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			width: 1px;
+			background: $border;
+		}
+	}
+
+	&__clinic{
+		display: flex;
+		width: 536px;
+		height: 264px;
+		border-radius: 8px;
+		box-shadow: 0px 4px 20px rgba(26, 57, 63, 0.1);
+		cursor: pointer;
+		&:hover{
+			.card{
+				&__clinic-title,
+				&__clinic-adress,
+				&__clinic-more{
+					color: $accent;
+				}
+				&__hover{
+					transition: all .5;
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+	&__clinic-img{
+		position: relative;
+		width: 264px;
+		border-radius: 8px 0 0 8px;
+		img{
+			border-radius: 8px 0 0 8px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__clinic-content{
+		padding: 28px 24px;
+		border-radius: 0 8px 8px 0;
+		position: relative;
+	}
+	&__clinic-title{
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 700;
+		color: $text1;
+	}
+	&__clinic-adress{
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+		color: $text3;
+		display: flex;
+		align-items: center;
+		.icon{
+			margin-right: 6px;
+		}
+	}
+	&__clinic-more{
+		position: absolute;
+		bottom: 25px;
+		right: 33px;
+		color: transparent;
+		display: flex;
+		align-items: center;
+		.icon{
+			margin-left: 8px;
+		}
+	}
+}
+

@@ -14,4 +14,19 @@
             background: #F72056;
         }
     }
+    &-secondary{
+        background: $accent;
+        &:hover{
+            background: #2BD9BC;;
+        }
+    }
+    &-contour{
+        border-color: $accent;
+        background: $white;
+        color: $text2;
+        &:hover{
+            color: #2BD9BC;
+            border-color: #46EBCF;
+        }
+    }
 }

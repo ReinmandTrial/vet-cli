@@ -231,4 +231,214 @@
         }
     }
 }
+.popular{
+    background: $white;
+    padding-top: 162px;
+    padding-bottom: 218px;
+    &__header{
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 38px;
+    }
+    &__title{
+        width: 489px;
+    }
+    .btn-contour{
+        margin-left: auto;
+    }
+    .btn{
+        max-height: 48px;
+    }
+    .btn-secondary{
+        margin-left: 20px;
+    }
+    &__slider{ 
+        padding: 24px 0;
+    }
+    &__slider-item{
+        background: $background1;
+        border-radius: 8px;
+        padding: 28px 32px;
+        height: 240px;
+    }
+    &__slider-title{
+        padding-bottom: 10px;
+    }
+    .slick-arrow{
+    }
+}
+// дефолтные настройки стрелок
+.slick,
+.slick--second{
+    background: transparent;
+    margin: 0 auto;
+    &-slide {
+        margin: 0 20px;
+    }
+      
+    &-list {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    &-arrow{
+        position: absolute;
+        top: 0;
+        z-index: 2; // стрелки сверху картинок
+        width: 40px; // ширина стрелки
+        height: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 20px;
+        color: $text1;
+        cursor: pointer;
+        &.slick-prev{
+            left: -40px;
+        }
+        &.slick-next{
+            right: -40px;
+        }
+        &:hover{
+            .icon{
+                color: $accent;
+            }
+        }
+    }
+}
+// дефолтные настройки стрелок (конец)
 
+.specialists{
+    background: $white;
+    padding-bottom: 136px;
+    &__header{
+        display: flex;
+        padding-bottom: 62px;
+        align-items: flex-end;
+    }
+    &__title{
+        width: 701px;
+    }
+    .btn{
+        max-height: 48px;
+        margin-left: auto;
+    }
+    &__slider{ 
+        padding: 48px 0;
+    }
+    &__slider-img{
+        border-radius: 8px;
+        width: 344px;
+        height: 400px;
+        margin-bottom: 16px;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__slider-title{
+        width: 207px;
+    }
+}
+.stories{
+    position: relative;
+    // padding-bottom: 224px;
+    background: $background3;
+    &__header{
+        display: flex;
+        align-items: flex-end;
+        padding-top: 130px;
+        padding-bottom: 62px;
+    }
+    &__title{
+        width: 785px;
+    }
+    .btn{
+        max-height: 48px;
+        margin-left: auto;
+    }
+    &__slider{
+        padding: 32px 0;
+    }
+    &__footer{
+        display: flex;
+    }
+    &__footer-img{
+        display: inline-block;
+        margin: 0 auto;
+        height: 230px;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.blog{
+    background: $white;
+    padding-bottom: 64px;
+    &__header{
+        display: flex;
+        align-items: flex-end;
+        padding-top: 154px;
+        padding-bottom: 62px;
+    }
+    &__title{
+        width: 730px;
+        color: $text1;
+    }
+    .btn{
+        margin-left: auto;
+        max-height: 48px;
+    }
+    &__content{
+        display: flex;
+    }
+    &__new{
+        width: 728px;
+    }
+    &__img{
+        height: 392px;
+        margin-bottom: 20px;
+        img{
+            height: 100%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
+    &__new-title{
+        display: block;
+        color: $text1;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+    &__new-date{
+        color: $text3;
+    }
+
+    &__content-news{
+        width: 344px;
+        margin-left: auto;
+    }
+    &__news-item{
+        position: relative;
+        padding:14px 0 19px;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            width: 100%;
+            background: $border;
+        }
+    }
+    &__news-title{
+        display: block;
+        font-size: 17px;
+        color: $text1;
+        padding-bottom: 2px;
+        cursor: pointer;
+    }
+}
