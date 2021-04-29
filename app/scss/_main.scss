@@ -442,3 +442,135 @@
         cursor: pointer;
     }
 }
+
+.top-page {
+    margin: 34px 0px 36px 0px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .subtitle {
+        max-width: 728px;
+    }
+}
+
+.skills {
+    margin-bottom: 72px;
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -8px;
+    }
+    .card__skills {
+        margin: 8px;
+    }
+}
+
+.specialists {
+    margin-bottom: 130px;
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 74px;
+    }
+}
+
+
+.location {
+    margin: 52px 0px 72px 0px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info {
+        max-width: 296px;
+    }
+    &__number {
+        color: $text1;
+        margin-bottom: 3px;
+    }
+    &__number-description {
+        color: $text2;
+        margin-bottom: 15px;
+    }
+    &__mail {
+        color: $text1;
+        margin-bottom: 44px;
+        display: block;
+    }
+    .switch {
+        margin-bottom: 20px;
+        height: unset;
+    }
+    &__name {
+        color: $text1;
+        margin-bottom: 8px;
+    }
+    &__address {
+        color: $text1;
+        margin-bottom: 27px;
+    }
+    &__more {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: $accent;
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 14px;
+            margin: 2px 0px 0px 8px;
+        }
+    }
+}
+
+.road {
+    margin-bottom: 112px;
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+    &__card {
+        background: $background1;
+        padding: 35px 56px 55px;
+        border-radius: 8px;
+        box-shadow: inset 0px 0px 10px rgba(49, 53, 54, 0.05);
+    }
+    &__title {
+        color: $text1;
+        margin-bottom: 23px;
+    }
+    &__text {
+        color: $text1;
+        max-width: 424px;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.gallery-header {
+    background: $background1;
+    padding-top: 57px;
+    .breadcrumbs {
+        margin-top: unset;
+    }
+    .page-header__title {
+       padding-bottom: 46px;
+    }
+    .switch {
+        margin-bottom: 24px;
+    }
+}
+
+.gallery-main {
+    padding: 64px 0px 128px 0px;
+    background: $background2;
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+}

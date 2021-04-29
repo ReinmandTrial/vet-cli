@@ -29,12 +29,43 @@ body {
   padding: 0 15px;
 }
 
+.breadcrumbs {
+	margin: 57px 0px 5px 0px;
+	display: flex;
+	&__item {
+		display: flex;
+		align-items: center;
+		color: $text3;
+		&:not(:first-child) {
+			margin-left: 8px;
+		}
+		&:last-child {
+			color: $text4; 
+			span {
+				display: none;
+			}
+		}
+		span {
+			margin: 2px 0px 0px 8px;
+			font-size: 14px;
+		}
+		&:hover {
+			color: $accent;
+			&:last-child {
+				color: $text4;
+			}
+		}
+	}
+
+}
+
 .switch{
 	display: inline-block;
-	padding: 8px;
+	padding: 4px;
 	box-shadow: inset 0px 0px 3px rgba(13, 61, 46, 0.4);
 	border-radius: 20px;
 	background: $background2;
+	height: 50%;
 	&__list{
 		display: flex;
 	}
@@ -60,6 +91,12 @@ body {
 }
 
 .card{
+	&__skills {
+		color: $text1;
+		padding: 7px 15px 9px 15px;
+		background: $background3;
+		border-radius: 4px;
+	}
 
 	&__service{
 		position: relative;
@@ -182,6 +219,7 @@ body {
 	&__specialist-title{
 		color: $text1;
 		width: 207px;
+		margin-bottom: 6px;
 	}
 	&__specialist-text{
 		color: $text2;
@@ -272,6 +310,7 @@ body {
 		line-height: 24px;
 		font-weight: 700;
 		color: $text1;
+		margin-bottom: 10px;
 	}
 	&__clinic-adress{
 		font-size: 14px;
@@ -291,8 +330,11 @@ body {
 		color: transparent;
 		display: flex;
 		align-items: center;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 24px;
 		.icon{
-			margin-left: 8px;
+			margin: 4px 0px 0px 8px;
 		}
 	}
 }

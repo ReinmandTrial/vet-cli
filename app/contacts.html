@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <!-- WRAPPER start -->
+  <div class="wrapper">
+
+    <!-- HEADER start  -->
+    <header class="header">
+
+      <div class="logo">
+        <a class="logo__img" href="#">
+          <img src="images/logo.png" alt="logo">
+        </a>
+      </div>
+
+      <div class="search">
+        <span class="icon icon-search"></span>
+        <input class="search__input" placeholder="Поиск по сайту" type="text">
+      </div>
+      <div class="address">
+        <div class="address__item">
+          <div class="address__title">Москва, Кулакова, 10 к. 1</div>
+          <div class="address__subtitle">Район Строгино м. Строгино, Мякинино</div>
+        </div>
+        <div class="address__item">
+          <div class="address__title">Москва, Загородное ш., 4 к. 2</div>
+          <div class="address__subtitle">Донской район м. Крымская, Верхние Котлы</div>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone__number h5">+7 (499) 110-23-03</div>
+        <a class="phone__button">Заказать звонок</a>
+      </div>
+
+    </header>
+    <!-- HEADER end  -->    
+
+    <!-- MAIN start  -->
+    <main class="main">
+
+      <!-- SIDEBAR start  -->
+      <sidebar class="sidebar">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">Наши услуги</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Стоимость</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Сотрудники</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">График работы</a></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">О клинике <span class="icon icon-angle-down"></span></a>
+              <ul class="menu__list--second">
+                <li class="menu__item--second"><a href="#" class="menu__link--second">Наша миссия</a></li>
+                <li class="menu__item--second"><a href="#" class="menu__link--second">Фотогалерея</a></li>
+                <li class="menu__item--second"><a href="#" class="menu__link--second">Отзывы</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Полезное <span class="icon icon-angle-down"></span></a>
+              <ul class="menu__list--second">
+                <li class="menu__item--second"><a href="#" class="menu__link--second">Истории пациентов</a></li>
+                <li class="menu__item--second"><a href="#" class="menu__link--second">Статьи</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <h3 class="sidebar__footer-title">Работаем для вас</h3>
+          <p class="sidebar__footer-description">ежедневно и круглосуточно</p>
+          <button class="btn btn-primary">Записаться на прием</button>
+        </div>
+      </sidebar>
+      <!-- SIDEBAR end  -->
+
+      <!-- CONTENT start  -->
+      <div class="content">
+        <!-- page-header start  -->
+        <div class="page-header">
+          <div class="container">
+            <!-- breadcrumbs start -->
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item mini-text"><a class="breadcrumbs__link" href="#">Главная</a><span class="icon icon-arrow-right"></span></li>
+              <li class="breadcrumbs__item mini-text"><a class="breadcrumbs__link" href="#">Контакты</a><span class="icon icon-arrow-right"></span></li>
+            </ul>
+            <!-- breadcrumbs end -->
+            <h1 class="h2 page-header__title">Контакты ветеринарного центра «ВетКэт»</h1>
+          </div>
+        </div>
+        <!-- page-header end  -->
+
+        <!-- location start -->
+        <div class="location">
+          <div class="container">
+            <div class="location__content">
+              <div class="location__info">
+                  <a class="h3 location__number" href="#">+7 (499) 110-23-03</a>
+                  <p class="mini-text location__number-description">Единый круглосуточный номер</p>
+                  <a class="h5 location__mail" href="#">vetket@list.ru</a>
+                  <div class="switch">
+                    <ul class="switch__list">
+                       <li class="switch__item active">Строгино</li>
+                       <li class="switch__item">Донской</li>
+                    </ul>
+                 </div>
+                 <p class="h5 location__name">Клиника «ВетКэт» в Строгино</p>
+                 <p class="text2 location__address">Москва, Кулакова, 10 корпус 1 Круглосуточно, без выходных</p>
+                 <a class="location__more" href="#">Как добраться?<span class="icon icon-arrow-right"></span></a>
+              </div>
+              <div class="location__map">
+                <img src="images/map.png" alt="map">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- location end -->
+
+        <!-- road start -->
+        <div class="road">
+          <div class="container">
+            <div class="road__content">
+              <div class="road__card">
+                <h5 class="h3 road__title">Метро Строгино</h5>
+                <p class="table-text road__text">Первый вагон из центра. Выход к Молдавской улице, пешком до остановки 190 метров.</p>
+                <p class="table-text road__text">Автобусы: № 45, 190, 610, 612, 867. Маршрутное такси: 509м и № 556м.</p>
+                <p class="table-text road__text">Необходимо проехать до 5-ой остановки «Улица Петра Алексеева». Выйдя на остановке, вернуться на 20 метров в обратную сторону, до жилого здания, которое находится на возвышенности.</p>
+              </div>
+              <div class="road__card">
+                <h5 class="h3 road__title">Метро Мякинино</h5>
+                <p class="table-text road__text">Первый вагон из центра. Выход к Молдавской улице, пешком до остановки 190 метров.</p>
+                <p class="table-text road__text">Автобусы: № 45, 190, 610, 612, 867. Маршрутное такси: 509м и № 556м.</p>
+                <p class="table-text road__text">Необходимо проехать до 5-ой остановки «Улица Петра Алексеева». Выйдя на остановке, вернуться на 20 метров в обратную сторону, до жилого здания, которое находится на возвышенности.</p>
+              </div>
+              <div class="road__card">
+                <h5 class="h3 road__title">На автомобиле</h5>
+                <p class="table-text road__text">Перед клиникой располагается парковка для пациентов. С ТТК необходимо съехать на Кутузовский проспект в сторону области. По Кутузовскому проспекту проехать 5 км. После 2-го Минского путепровода съехать на дублёр и через 600 метров повернуть во двор. На шлагбауме размещена табличка «ВетКэт». Оставайтесь около шлагбаума, администраторы увидят вас в камеру наружного наблюдения и откроют.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- road end -->
+
+      </div>
+      <!-- CONTENT end -->
+      
+    </main>
+    <!-- MAIN end -->
+
+    <!-- FOOTER start  -->
+    <footer class="footer">
+       <div class="container">
+         <div class="footer__content">
+           <div class="footer__instagram">
+             <h3 class="footer__instagram-title">Подпишитесь, чтобы быть в курсе
+              всех акций и новостей</h3>
+             <a class="footer__instagram-img" href="#"><img src="images/logo-instagram.png" alt="inst"></a>
+           </div>
+           <div class="footer__text mini-text">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями ч.2 ст.437 Гражданского кодекса Российской Федерации. Для получения подробной информации о стоимости и сроках выполнения услуг, пожалуйста, обращайтесь к сотрудникам ветеринарного центра «ВетКэт».</div>
+         </div>
+         <div class="footer__copyright">
+          <span class="footer__copyright-info mini-text">© Ветеринарный центр «ВетКэт». Все права защищены. 2020</span>
+          <a class="footer__copyright-link mini-text" href="#">Политика конфиденциальности</a>
+         </div>
+       </div>
+    </footer>
+    <!-- FOOTER end -->
+
+  </div>
+  <!-- WRAPPER end -->
+
+
+
+  <!-- SCRIPTS start  -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
