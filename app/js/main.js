@@ -37,4 +37,16 @@ $(function () {
       btn.addClass('active');
     })
    //switch block end
+   //skils
+   $('.card__skills').on('click',function(){
+      var btn = $(this);
+      var thisParent = btn.closest('.skills__content');
+      var btnItem = thisParent.find('.card__skills');
+
+      $(btnItem).each(function(){
+         $(this).removeClass('active');
+      })
+      btn.addClass('active');
+   })
+   //skils end
 })

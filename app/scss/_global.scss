@@ -28,6 +28,19 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.page-header{
+	background: $white
+}
+.page-header--green{
+	background: $background1;
+	padding: 57px 0 24px;
+	.switch{
+		margin-top: 46px;
+	}
+	.breadcrumbs{
+		margin-top: 0;
+	}
+}
 
 .breadcrumbs {
 	margin: 57px 0px 5px 0px;
@@ -99,6 +112,13 @@ body {
 		padding: 7px 15px 9px 15px;
 		background: $background3;
 		border-radius: 4px;
+		&:hover{
+			color: $accent;
+		}
+		&.active{
+			background: $accent;
+			color: $white;
+		}
 	}
 
 	&__service{
@@ -170,12 +190,10 @@ body {
 	}
 	&__animals-img{
 		position: relative;
-		width: 248px;
-		height: 248px;
+		width: 100%;
 		margin-bottom: 16px;
 		img{
-			height: 100%;
-			object-fit: cover;
+			width: 100%;
 		}
 	}
 	&__animals-title{
@@ -340,5 +358,138 @@ body {
 			margin: 4px 0px 0px 8px;
 		}
 	}
+	//service
+	&__price{
+		padding: 35px 56px;
+		background: #000;
+		background: $background1;
+		box-shadow: inset 0px 0px 10px rgba(49, 53, 54, 0.05);
+		border-radius: 8px;
+		width: 536px;
+		height: auto;
+	}
+	&__price-header{
+		position: relative;
+		margin-bottom: 12px;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 1px;
+			background: $border;
+		}
+	}
+	&__price-title{
+		font-size: 30px;
+		line-height: 35px;
+		font-weight: 700;
+		color: $text1;
+		padding-bottom: 5px;
+	}
+	&__price-info{
+		color: $text2;
+		font-size: 14px;
+		line-height: 20px;
+		padding-bottom: 19px;
+	}
+	&__price-subtitle{
+		font-size: 17px;
+		line-height: 24px;
+		font-weight: 700;
+		color: $text1;
+		padding-bottom: 12px;
+	}
+	&__price-list{
+		margin-bottom: 20px;
+	}
+	&__price-item{
+		display: flex;
+		justify-content: space-between;
+		font-size: 17px;
+		line-height: 24px;
+		color: $text1;
+		&:not(:last-child){
+			padding-bottom: 12px;
+		}
+	}
+	&__price-name{
+		width: 344px;
+	}
+
+	//Отзывы
+	&__review{
+		width: 344px;
+		height: 288px;
+		padding: 27px 32px 41px;
+		background: $white;
+		color: $text1;
+		box-shadow: 0px 4px 20px rgba(26, 57, 63, 0.1);
+		border-radius: 16px;
+	}
+	&__review-title{
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 700;
+		padding-bottom: 16px;
+	}
+	&__review-text{
+		font-size: 17px;
+		line-height: 28px;
+		margin-bottom: 18px;
+		height: 140px;
+	}
+	&__review-footer{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__review-date{
+		font-size: 14px;
+		line-height: 20px;
+		color: $text3;
+	}
+	&__review-more{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		color: $accent;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 700;
+		.icon{
+			margin-left: 8px;
+		}
+	}
 }
+
+.searchBlock{
+	width: 100%;
+	background: $background1;
+	padding: 48px 56px;
+	height: 144px;
+	&__body{
+		display: flex;
+		width: 100%;
+	}
+	&__input{
+		flex: 1 0 auto;
+		background: $white;
+		border: 2px solid $accent;
+		border-radius: 16px 0 0 16px;
+		height: 100%;
+		padding: 11px 20px 13px;
+		outline: none;
+		&::placeholder{
+			color: $text4;
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	.btn-search{
+		border-radius: 0 16px 16px 0;
+	}
+}
+
 
