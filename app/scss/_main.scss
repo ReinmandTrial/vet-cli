@@ -443,7 +443,6 @@
     }
 }
 
-<<<<<<< HEAD
 .top-page {
     margin: 34px 0px 36px 0px;
     &__content {
@@ -522,7 +521,9 @@
         span {
             font-size: 14px;
             margin: 2px 0px 0px 8px;
-=======
+        }
+    }
+}
 .service-popular{
     margin-bottom: 59px;
     margin-top: 46px;
@@ -555,12 +556,10 @@
         img{
             width: 100%;
             height: 100%;
->>>>>>> bf5353c42d62e663826410e0e72df043c189166f
         }
     }
 }
 
-<<<<<<< HEAD
 .road {
     margin-bottom: 112px;
     &__content {
@@ -609,7 +608,7 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 40px;
     }
-=======
+}
 .service-all{
     &__title{
         color: $text1;
@@ -628,5 +627,4 @@
         }
     }
     padding-bottom: 116px;
->>>>>>> bf5353c42d62e663826410e0e72df043c189166f
 }
