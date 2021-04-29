@@ -28,7 +28,9 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-
+.content--service{
+	background: $background1;
+}
 .switch{
 	display: inline-block;
 	padding: 8px;
