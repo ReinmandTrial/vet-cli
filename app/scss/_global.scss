@@ -29,7 +29,7 @@ body {
   padding: 0 15px;
 }
 .page-header{
-	background: $white
+	background: transparent;
 }
 .page-header--green{
 	background: $background1;
@@ -89,8 +89,9 @@ body {
 		cursor: pointer;
 		background: transparent;
 		padding: 7px 20px 9px 20px;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 24px;
+		font-weight: bold;
 		color: $text3;
 		&.active{
 			background: $accent;
@@ -343,6 +344,7 @@ body {
 		align-items: center;
 		.icon{
 			margin-right: 6px;
+			font-size: 20px;
 		}
 	}
 	&__clinic-more{
@@ -441,6 +443,8 @@ body {
 		line-height: 28px;
 		margin-bottom: 18px;
 		height: 140px;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	&__review-footer{
 		display: flex;
@@ -461,6 +465,7 @@ body {
 		font-weight: 700;
 		.icon{
 			margin-left: 8px;
+			margin-top: 4px;
 		}
 	}
 }
