@@ -4,13 +4,6 @@ $(function () {
       var btnParent = btn.closest('.menu__item');
       btnParent.toggleClass('open');
    })
-   // $('.top__slider').slick({
-   //    dots: true,
-   //    arrows: false,
-   //    fade: true,
-   //    autoplay: true
-   // });
-   
    // Слайдер 
    $('.slick').slick({
       infinite: true,
@@ -50,3 +43,112 @@ $(function () {
    })
    //skils end
 })
+// review slider
+var click = false;
+var glowInterval = 2000 // 1000 = 1 sec
+$(document).ready(function() {
+   setInterval(function(){
+      if(click === false){
+         var pos = 1;
+         //обработка dots
+         var block = $('.review__dots');
+         var blockItem = block.find('.review__dots-item');
+         $(blockItem).each(function(index){
+            if($(this).hasClass('active')){
+               if($(this).is(':last-child')){
+                  $(this).removeClass('active');
+                  $(blockItem).each(function(){
+                     if($(this).is(':first-child')){
+                        $(this).addClass('active');
+                        pos = 1;
+                     }
+                  })
+               }else{
+                  $(this).removeClass('active');
+                  $(this).next().addClass('active');
+                  pos = index + 2;
+                  return false;
+               }
+            }
+         })
+         //обработка бордеров
+         var blockBody = $('.review__slide');
+         $(blockBody).each(function(){
+            $(this).removeClass().addClass('review__slide');
+         })
+         if(pos === 1){
+            blockBody.addClass('top');
+         }else if(pos === 2){
+            blockBody.addClass('right'); 
+         }else if(pos === 3){
+            blockBody.addClass('bottom');
+         }else if(pos === 4){
+            blockBody.addClass('left');
+         }
+         //обработка текста
+         var blockTextItem = $('.review__info-list').find('.review__info-item');
+         $(blockTextItem).each(function(){
+            $(this).removeClass('active');
+         })
+         $(blockTextItem).each(function(index){
+            if(pos === (index+1)){
+               $(this).addClass('active');
+            }
+         })
+
+      }
+      click = false;
+   }, glowInterval);
+});
+$('.review__dots-item').on('click',function(){
+   //обработчик дотсов
+   var btn = $(this);
+   var btnItems = btn.closest('.review__dots').find('.review__dots-item');
+   var blockBody = $('.review__slide');
+   var blockTextItem = $('.review__info-list').find('.review__info-item');
+   $(btnItems).each(function(){
+      $(this).removeClass('active');
+   })
+   btn.addClass('active');
+   $(btnItems).each(function(index){
+      if($(this).hasClass('active')){
+         pos2 = index + 1;
+      }
+   })
+   //обработка бордеров
+   $(blockBody).each(function(){
+      $(this).removeClass().addClass('review__slide');
+   })
+   if(pos2 === 1){
+      blockBody.addClass('top');
+   }else if(pos2 === 2){
+      blockBody.addClass('right'); 
+   }else if(pos2 === 3){
+      blockBody.addClass('bottom');
+   }else if(pos2 === 4){
+      blockBody.addClass('left');
+   }
+   //обработчик блоков с текстом
+   $(blockTextItem).each(function(){
+      $(this).removeClass('active');
+   })
+   $(blockTextItem).each(function(index){
+      if(pos2 === (index+1)){
+         $(this).addClass('active');
+      }
+   })
+   click = true;
+})
+//review slider end
+
+//popup start
+$('.btn-popup').on('click',function(){
+   if($(this).hasClass('.popup-template')){
+      $('.popup-template').show();
+   }
+   // $('.popup').show();
+})
+$('.popup-close').on('click',function(){
+   $(this).closest('.popup').hide();
+})
+//popup end
