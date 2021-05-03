@@ -1084,3 +1084,64 @@
         grid-area: 3 / 1 / 4 / 2;
     }
 }
+
+.employee {
+    background: $background1;
+    padding: 57px 0px 82px 0px;
+    &__content {
+
+    }
+    .breadcrumbs {
+        margin-top: unset;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info {
+        max-width: 496px;
+    }
+    &__img {
+        text-align: center;
+    }
+    &__review {
+        margin-top: 15px;
+    }
+    &__link {
+        color: $accentDark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            margin-right: 8px;
+            font-size: 22px;
+        }
+    }
+    .h2 {
+        margin-bottom: 10px;
+        color: $text1;
+    }
+    .subtitle {
+        margin-bottom: 22px;
+        color: $text2;
+    }
+    &__more {
+        font-weight: bold;
+        color: $text2;
+    }
+    .skills__content {
+        margin: -8px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+    }
+    .card__skills {
+        margin: 8px;
+        background: $white;
+    }
+    &__review-Block {
+        .reviewBlock {
+            background: $background1;
+        }
+    }
+
+}
