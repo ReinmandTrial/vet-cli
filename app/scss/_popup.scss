@@ -1,0 +1,55 @@
+// popup template
+.popup{
+	position: fixed;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   display: none;
+   text-align: center;
+   z-index: 999;
+	.popup-bg{
+		background: $popupBacground;
+		position: fixed;
+		z-index: 5;
+		height: 100%;
+		width: 100%;
+	}
+	.popup-body{
+		display: inline-block;
+		background: $white;
+		position: relative;
+		z-index: 999;
+		margin: 10% 0 0 0;
+		text-align: left;
+	}
+	.popup-close__icon{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.popup-close{
+		cursor: pointer;
+	}
+	&.open{
+		display: block;
+	}
+}
+//popup template
+
+//popup review
+.popup__review{
+   color: $text1;
+   &-body{
+      width: 1112px;
+      padding: 88px 144px 124px;
+   }
+   &-title{
+      padding-bottom: 28px;
+   }
+	.popup-close__icon{
+		right: 36px;
+		top: 36px;
+	}
+}
+
+// popup review end 

@@ -142,13 +142,55 @@ $('.review__dots-item').on('click',function(){
 //review slider end
 
 //popup start
-$('.btn-popup').on('click',function(){
-   if($(this).hasClass('.popup-template')){
-      $('.popup-template').show();
-   }
-   // $('.popup').show();
-})
+// $('.btn-popup').on('click',function(){
+//    if($(this).hasClass('.popup-template')){
+//       $('.popup-template').show();
+//    }
+//    // $('.popup').show();
+// })
 $('.popup-close').on('click',function(){
-   $(this).closest('.popup').hide();
+   $(this).closest('.popup').removeClass('open');
 })
 //popup end
+// popup-review start
+$('.card__review-more').on('click',function(){
+   var btn = $(this);
+   var popup = $('.popup__review');
+   var title = btn.closest('.card__review').find('.card__review-title').html();
+   var text = btn.closest('.card__review').find('.card__review-text').html();
+   popup.find('.popup__review-title').html(title);
+   popup.find('.popup__review-text').html(text);
+   popup.addClass('open');
+})
+//popup-review end
+
+// select start 
+$(function(){
+   var select = $('.select');
+   var items = select.find('.select-list').find('.select-item');
+   var title = select.find('.select__header-title');
+   $(items).each(function(){
+      if($(this).is(':first-child')){
+         title.html($(this).html());
+      }
+   })
+})
+$('.select__header').on('click',function(){
+   var select = $(this).closest('.select');
+   select.toggleClass('open');
+})
+$('.select-item').on('click',function(){
+   var btn = $(this);
+   var text = btn.html();
+   var select = btn.closest('.select');
+   select.find('.select__header-title').html(text);
+})
+$(document).mouseup(function (e) {
+   var container = $(".select");
+   var body = container.find('.select__body');
+   var header = container.find('.select__header');
+   if (header.has(e.target).length === 0){
+      container.removeClass('open');
+   }
+});
+// select end 

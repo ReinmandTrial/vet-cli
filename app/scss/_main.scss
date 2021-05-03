@@ -305,6 +305,19 @@
         }
     }
 }
+.slick-cert{
+    .slick-slide{
+        margin: 0 11px;
+    }
+    .slick-arrow{
+        &.slick-prev{
+            left: -50px;
+        }
+        &.slick-next{
+            right: -50px;
+        }
+    }
+}
 // дефолтные настройки стрелок (конец)
 
 .specialists{
