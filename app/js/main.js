@@ -162,18 +162,30 @@ $('.card__review-more').on('click',function(){
    popup.find('.popup__review-text').html(text);
    popup.addClass('open');
 })
-//popup-review end
 
+//popup-review end
+//popup-createReview
+$('.btn-review').on('click',function(){
+   var btn = $(this);
+   var popup = $('.popup__createReview');
+   popup.addClass('open');
+})
+//popup-createReview
 // select start 
 $(function(){
    var select = $('.select');
    var items = select.find('.select-list').find('.select-item');
    var title = select.find('.select__header-title');
-   $(items).each(function(){
-      if($(this).is(':first-child')){
-         title.html($(this).html());
-      }
-   })
+   if(!$('.content').hasClass('content--employee')){
+      $(items).each(function(){
+         if($(this).is(':first-child')){
+            title.html($(this).html());
+         }
+      })
+   }else{
+      title.html($('.content--employee').find('.employee__info').find('h1.h2').html());
+   }
+   
 })
 $('.select__header').on('click',function(){
    var select = $(this).closest('.select');
@@ -187,7 +199,7 @@ $('.select-item').on('click',function(){
 })
 $(document).mouseup(function (e) {
    var container = $(".select");
-   var body = container.find('.select__body');
+   // var body = container.find('.select__body');
    var header = container.find('.select__header');
    if (header.has(e.target).length === 0){
       container.removeClass('open');
