@@ -7,14 +7,15 @@
    display: none;
    text-align: center;
    z-index: 999;
-	.popup-bg{
+	&-bg{
 		background: $popupBacground;
+		opacity: .9;
 		position: fixed;
 		z-index: 5;
 		height: 100%;
 		width: 100%;
 	}
-	.popup-body{
+	&-body{
 		display: inline-block;
 		background: $white;
 		position: relative;
@@ -22,12 +23,12 @@
 		margin: 10% 0 0 0;
 		text-align: left;
 	}
-	.popup-close__icon{
+	&-close__icon{
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
-	.popup-close{
+	&-close{
 		cursor: pointer;
 	}
 	&.open{
@@ -53,16 +54,21 @@
 }
 
 // popup review end 
+//popup create (tamplate)
 
-//popup createReview
-.popup__createReview{
-	display: none;
+.create{
 	&-body{
+		position: relative;
 		color: $text1;
 		width: 608px;
 		padding: 66px 80px 112px;
 		background: $white;
 		border-radius: 26px;
+		margin: 60px 0 0;
+		.popup-close__icon{
+			right: 24px;
+			top: 24px;
+		}
 	}
 	&-title{
 		padding-bottom: 32px;
@@ -78,9 +84,143 @@
 		border: 1px solid $border;
 		border-radius: 4px;
 	}
-	.popup-close__icon{
-		right: 24px;
-		top: 24px;
+	&__data{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 8px;
+	}
+	&__data-title{
+		color: $text2;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+	&__data-input{
+		border: 1px solid $border;
+		border-radius: 4px;
+		background: $white;
+		width: 272px;
+		height: 40px;
+		padding: 2px 10px;
 	}
 }
+//popup create end
+
+//popup createReview
+.createReview{
+}
 //popup createReview end
+// popup gallery
+.slider{
+	position: relative;
+	width: 100%;
+	margin:  0 auto;
+}
+.s-prev,
+.s-next{
+	width: 64px;
+	height: 64px;
+	cursor: pointer;
+	position: absolute;
+	top: calc(50% - 64px/2);
+	border: none;
+	border-radius: 16px;
+	background: $accent;
+	color: $white;
+}
+.s-prev{
+	left: -40px;
+}
+.s-next{
+	right: -40px;
+}
+	.slickslide{
+		width: 1112px;
+		margin:  0 auto;
+		position: relative;
+		text-align: center;
+		&-item{
+			width: 900px;
+			height: 596px;
+			display: none;
+			text-align: center;
+			transition: all .2s;
+			img{
+				max-width: 100%;
+				max-height: 100%;
+				display: inline-block;
+				object-fit: cover;
+				height: 100%;
+			}
+			&.active{
+				display: inline-block;
+			}
+		}
+	}
+	.slickslide-nav{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		&__item{
+			position: relative;
+			cursor: pointer;
+			max-width: 96px;
+			width: max-content;
+			height: 64px;
+			text-align: center;
+			img{
+				max-width: 100%;
+				max-height: 100%;
+				display: inline-block;
+				object-fit: cover;
+				height: 100%;
+				border: 3px solid transparent;
+			}
+			&.active{
+				.slickslide-nav__bg{
+					display: none;
+				}
+				img{
+					border-color: $accent;
+				}
+			}
+		}
+		&__bg{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: calc(100% - 6px);
+			height: calc(100% - 6px);
+			opacity: .6;
+			background: $popupBacground;
+			margin: 3px;
+		}
+	}
+	.popup__gallery{
+		.popup-body{
+			margin: 0;
+			width: 100%;
+			padding: 0 240px;
+			background: transparent;
+			text-align: center;
+			color: $white;
+		}
+		.popup-close__icon{
+			top: 36px;
+			right: 83px;
+		}
+		.popup__title{
+			padding: 28px 0 10px;
+		}
+		.slider{
+			padding-top: 82px;
+		}
+		.slick-thumbs{
+			padding-top: 70px;
+		}
+	}
+// popup gallery end 

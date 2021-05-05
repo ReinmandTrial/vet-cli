@@ -202,12 +202,12 @@
       </div>
       <!-- Конец попапа на отзывы  -->
       <!-- Попап на "оставить отзыв"  -->
-      <div class="popup popup__createReview">
+      <div class="popup createReview">
          <div class="popup-bg"></div>
-         <div class="popup-body popup__createReview-body">
+         <div class="popup-body create-body">
             <div class="span popup-close popup-close__icon">X</div>
-            <h2 class="h2 popup__createReview-title">Оставить отзыв</h2>
-            <span class="popup__createReview-subtitle">Специалист</span>
+            <h2 class="h2 create-title">Оставить отзыв</h2>
+            <span class="create-subtitle">Специалист</span>
             <div class="select">
                <div class="select__header">
                   <span class="select__header-title"></span>
@@ -222,7 +222,21 @@
                   </ul>
                </div>
             </div>
-            <textarea name="reviewArea" class="popup__createReview-area"></textarea>
+            <textarea name="reviewArea" class="create-area"></textarea>
+            <div class="create__data">
+               <span class="create__data-title">Ваше имя</span>
+               <input class="create__data-input" type="text">
+            </div>
+            <div class="create__data">
+               <span class="create__data-title">E-mail для ответа </span>
+               <input class="create__data-input" type="text">
+            </div>
+            <div class="create__data">
+               <input class="create__data-check" type="checkbox">
+               <span class="create__data-title"><span class="mini-text">Я согласен с</span>условиями обработки
+                  персональных данных</span>
+               <button class="btn btn-secondary">Отправить</button>
+            </div>
          </div>
       </div>
       <!-- Конец попапа на "оставить отзыв"  -->

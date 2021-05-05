@@ -305,11 +305,12 @@
         }
     }
 }
-.slick-cert{
+.slick--cert{
     .slick-slide{
         margin: 0 11px;
     }
     .slick-arrow{
+        background: $background2;
         &.slick-prev{
             left: -50px;
         }
