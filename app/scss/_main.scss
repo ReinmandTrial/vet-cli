@@ -651,9 +651,10 @@
     &__list{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: -12px;
     }
     &__item{
-        height: 56px;
+        margin: 12px;
         a{
             font-size: 20px;
             line-height: 24px;
