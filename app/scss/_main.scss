@@ -1005,8 +1005,31 @@
 }
 
 .inst {
+    position: relative;
     background: $background1;
     padding: 66px 0px 104px;
+    &__cat {
+        width: 792px;
+        height: 540px;
+        position: absolute;
+        top: -120px;
+        right: 70px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__heart {
+        width: 566px;
+        height: 200px;
+        position: absolute;
+        right: 145px;
+        top: 400px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
     .h2 {
         margin-bottom: 38px;
     }
