@@ -96,6 +96,20 @@
 		font-size: 16px;
 		line-height: 24px;
 		font-weight: 700;
+		.mini-text{
+			font-weight: 400;
+			color: $text3;
+		}
+	}
+	&__data-body{
+		width: 284px;
+		margin-left: auto;
+		.create__data-input{
+			width: 100%;
+		}
+		.switch{
+			margin-right: auto;
+		}
 	}
 	&__data-input{
 		border: 1px solid $border;
@@ -104,6 +118,28 @@
 		width: 272px;
 		height: 40px;
 		padding: 2px 10px;
+	}
+	&__data-calendar{
+		border: 1px solid $border;
+		border-radius: 4px;
+		padding: 12px;
+		display: flex;
+		align-items: center;
+		height: 40px;
+		width: 236px;
+		margin-right: auto;
+		input{
+			flex: 1 0 auto;
+			border: none;
+		}
+		i{
+			cursor: pointer;
+		}
+	}
+}
+.createSubscribe{
+	.create-body{
+		margin: 24px 0 0;
 	}
 }
 //popup create end
