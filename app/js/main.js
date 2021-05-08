@@ -13,13 +13,29 @@ $(function () {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      arrows: true
+      arrows: true,
+      responsive:[
+         {
+            breakpoint: 1400,
+            settings:{
+               slidesToShow: 2
+            }
+         }
+      ]
     });
     $('.slick--second').slick({
        infinite: true,
        slidesToShow: 4,
        slidesToScroll: 1,
-       arrows: true
+       arrows: true,
+       responsive:[
+          {
+             breakpoint:1400,
+             settings:{
+                slidesToShow:3
+             }
+          }
+       ]
     })
     $('.slick-next').html('<span class="icon icon-angle-right"></span>');
     $('.slick-prev').html('<span class="icon icon-angle-left"></span>');

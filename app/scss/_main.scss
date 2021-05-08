@@ -222,14 +222,16 @@
         }
     }
     &__img {
+        width: 100%;
         background: $background1;
         position: absolute;
         top: 0;
         right: 0;
         z-index: -1;
         img {
-            width: 100%;
+            margin-left: auto;
             height: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -289,16 +291,16 @@
         width: 40px; // ширина стрелки
         height: 100%;
         border: none;
-        background: transparent;
+        background: $white;
         outline: none;
         font-size: 20px;
         color: $text1;
         cursor: pointer;
         &.slick-prev{
-            left: -40px;
+            left: -55px;
         }
         &.slick-next{
-            right: -40px;
+            right: -55px;
         }
         &:hover{
             .icon{
@@ -653,9 +655,10 @@
     &__list{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: -12px;
     }
     &__item{
-        height: 56px;
+        margin: 12px;
         a{
             font-size: 20px;
             line-height: 24px;

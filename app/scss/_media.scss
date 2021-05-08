@@ -1,0 +1,248 @@
+// MAX-WIDTH 1600PX breakpoints START
+@media (max-width: 1600px) {
+    .phone  {
+        padding: 24px 20px 24px 20px;
+    }
+    .address {
+        padding: 18px 20px;
+    }
+    .popular{
+        padding: 162px 45px 218px ;
+        &__header{
+            margin: 0 -45px;
+        }
+        .slick-slide{
+            margin: 0 15px;
+        }
+    }
+    .card{
+        &__service-text{
+            width: unset;
+        }
+    }
+    .specialists{
+        padding: 0 45px 130px;
+        &__header{
+            margin: 0 -45px;
+        }
+    }
+    .stories{
+        padding: 0 45px;
+        &__header{
+            margin: 0 -45px;
+        }
+        .slick-arrow{
+            background: $background3;
+        }
+    }
+    .blog{
+        &__new{
+            width: 690px;
+        }
+    }
+    .inst{
+        &__cat{
+            right: -200px;
+        }
+        &__heart{
+            height: unset;
+            width: 470px;
+            right: 50px;
+        }
+    }
+    .locate{
+        &__map{
+            height: unset;
+            width: 700px;
+        }
+    }
+    .review{
+        &__body{
+            width: unset;
+        }
+        &__description{
+            justify-content: unset;
+        }
+        &__dots{
+            width: 194px;
+        }
+        &__info{
+            margin-left: 20px;  
+        }
+    }
+}
+// MAX-WIDTH 1600PX breakpoints END
+
+// MAX-WIDTH 1399.98PX breakpoints START
+@media (max-width: 1399.98px) {
+    .h1 {
+        font-size: 46px;
+        line-height: 54px;
+    }
+    .h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .address {
+        display: none;
+    }
+    .footer {
+        height: 213px;
+        &__content {
+            padding-bottom: 18px;
+        }
+    }
+    .menu {
+        padding: 20px 0px 0px 20px;
+    }
+    .desctop{
+        &__item:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+    .popular{
+        padding: 44px 45px 75px;
+        &__header{
+            padding-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        &__title{
+            padding-bottom: 15px;
+            width: 100%;
+        }
+        .btn-contour{
+            margin-left: unset;
+        }
+    }
+    .review{
+        padding-bottom: 81px;
+        &__content{
+            justify-content: space-around;
+        }
+        &__description{
+            flex-wrap: wrap;
+            width: min-content;
+        }
+        &__slide{
+            margin-right: 0;
+        }
+        &__info{
+            padding-top: 45px;
+        }
+        &__info-text{
+            padding-bottom: 70px;
+        }
+    }
+    .specialists{
+        padding-bottom: 72px;
+        &__header{
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+        &__title{
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        .btn{
+            margin-left: 0;
+        }
+        margin-bottom: 0;
+    }
+    .stories{
+        &__header{
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+            padding-top: 65px;
+        }
+        &__title{
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        .btn{
+            margin-left: 0;
+        }
+    }
+    .blog{
+        &__header{
+            flex-wrap: wrap;
+            padding-top: 81px;
+            padding-bottom: 50px;
+        }
+        &__title{
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        .btn{
+            margin-left: 0;
+        }
+        &__new{
+            width: calc(100% - 370px);
+        }
+    }
+    .locate{
+        padding: 69px 0 64px;
+        &__map{
+            width: calc(100% - 370px);
+        }
+    }
+
+
+}
+// MAX-WIDTH 1399.98PX breakpoints END
+
+// MAX-WIDTH 1199.98PX breakpoints START
+@media (max-width: 1199.98px) {
+    .main {
+        padding-left: 240px;
+    }
+    .logo {
+        width: 240px;
+        padding: unset;
+        display: flex;
+    }
+    .sidebar {
+        width: 240px;
+        &__footer {
+            padding: 51px 20px;
+        }
+    }
+    .footer {
+        height: unset;
+        padding-left: 240px;
+        &__content {
+            display: block;
+        }
+        &__instagram {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: unset;
+        }
+        &__instagram-title {
+            margin-bottom: unset;
+            order: 1;
+        }
+        &__instagram-img {
+            margin-right: 20px;
+        }
+    }
+} 
+// MAX-WIDTH 1199.98PX breakpoints END
+
+// MAX-WIDTH 991.98PX breakpoints START
+@media (max-width: 991.98px) {
+
+}
+// MAX-WIDTH 991.98PX breakpoints END
+
+// MAX-WIDTH 767.98PX breakpoints START
+@media (max-width: 767.98px) {
+
+}
+// MAX-WIDTH 767.98PX breakpoints END
+
+// MAX-WIDTH 576.98PX breakpoints START 
+@media (max-width: 575.98px) {
+
+}
+// MAX-WIDTH 576.98PX breakpoints END 
