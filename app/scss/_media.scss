@@ -7,7 +7,7 @@
         padding: 18px 20px;
     }
     .popular{
-        padding: 162px 45px 218px ;
+        padding: 44px 45px 79px ;
         &__header{
             margin: 0 -45px;
         }
@@ -20,8 +20,18 @@
             width: unset;
         }
     }
+    .desctop {
+        height: unset;
+        &__title {
+            padding-top: 37px;
+        }
+    }
+    .review {
+        padding-bottom: 81px;
+    }
     .specialists{
         padding: 0 45px 130px;
+        margin-bottom: unset;
         &__header{
             margin: 0 -45px;
         }
@@ -70,7 +80,44 @@
             margin-left: 20px;  
         }
     }
+    .card {
+        &__price {
+            width: 100%;
+        }
+    }
+    .priceBlock {
+        &__item {
+            width: calc(50% - 20px);
+        }
+    }
+    .our-specialists {
+        &__content {
+            grid-column-gap: 20px;
+            grid-row-gap: 60px;
+        }
+    }
+    .employeeSchedule {
+        .schedule {
+            &__header {
+                .schedule {
+                    &__slider {
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .employee-info {
+        .card__price {
+            width: calc(50% - 20px);
+        }
+        &__description {
+            padding-left: 10px;
+            max-width: 374px;
+        }
+    }
 }
+
 // MAX-WIDTH 1600PX breakpoints END
 
 // MAX-WIDTH 1399.98PX breakpoints START
@@ -185,7 +232,69 @@
             width: calc(100% - 370px);
         }
     }
+    .our-specialists {
+        &__content {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .card {
+        &__specialist {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+    .employee {
+        padding: 57px 0px 32px;
+        &-info {
+            padding: 52px 0px 56px;
+            .card__price {
+                width: calc(50% - 5px);
+                padding: 20px 16px;
+            }
+        }
+    }
+    .employeeSchedule {
+        padding-top: 34px;
+        .schedule__header {
+            display: block;
+            .icon {
+                margin-right: 7px;
+            }
+        }
+        .schedule__body-head {
+            display: block;
+        }
+        .schedule__header {
+            .schedule__slider {
+                margin: 0px 35px;
+            }
+        }
+        .schedule__body-title {
+            width: unset;
+            padding-right: 50px;
+        }
+        .schedule__slider {
+            margin: 0px 35px;
 
+        }
+        .schedule__title { 
+            margin-bottom: 18px;
+        }
+    }
+    .reviewBlock {
+        padding: 24px 0px 20px;
+        &__title {
+            max-width: 300px;
+        }
+        &__item {
+            margin-right: unset;
+            width: 100%;
+            &:nth-child(4n + 2),
+            &:nth-child(4n + 3) {
+                width: 100%;
+            }
+        }
+    }
 
 }
 // MAX-WIDTH 1399.98PX breakpoints END
@@ -226,12 +335,114 @@
             margin-right: 20px;
         }
     }
+    .top-page {
+        margin: 16px 0px 32px;
+        &__content {
+            display: block;
+        }
+        .switch {
+            margin-top: 19px;
+        }
+    }
+    .desctop {
+        &__img {
+            height: 100%;
+        }
+        &__list {
+            margin-bottom: unset;
+        }
+        &__content {
+            padding-bottom: 30px;
+        }
+    }
+    .review {
+        &__content {
+            position: relative;
+            justify-content: none;
+            display: block;
+        }
+        &__slide {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+        &__info-text {
+            padding-bottom: 32px;
+            width: 575px;
+        }
+        &__title {
+            padding-bottom: 182px;
+        }
+        &__info {
+            width: unset;
+        }
+        &__info-title {
+            padding-bottom: 35px;
+            width: 333px;
+        }
+    }
+    .specialists {
+        padding-bottom: 34px;
+    }
+    .blog {
+        &__content {
+            display: block;
+        }
+        &__new {
+            width: unset;
+        }
+        &__content-news {
+            width: unset;
+            margin-left: unset;
+        }
+        &__new-title {
+            margin-bottom: unset;
+        }
+        &__news-item {
+            &:first-child {
+                margin-top: 19px;
+            }
+        }
+    }
+    .inst {
+        padding: 65px 0px 80px;
+        &__cat {
+            display: none;
+        }
+    }
+    .locate {
+        &__title {
+            padding-bottom: 27px;
+        }
+        &__content {
+            display: block;
+        }
+        &__map {
+            width: unset;
+        }
+        &__info {
+            width: unset;
+            margin-top: 28px;
+            text-align: center;
+        }
+        &__adress {
+            padding-right: 60px;
+            text-align: left;
+        }
+        &__adress-body {
+            display: flex;
+            justify-content: space-around;
+        }
+
+    }
+
 } 
 // MAX-WIDTH 1199.98PX breakpoints END
 
 // MAX-WIDTH 991.98PX breakpoints START
 @media (max-width: 991.98px) {
-
+    
 }
 // MAX-WIDTH 991.98PX breakpoints END
 
