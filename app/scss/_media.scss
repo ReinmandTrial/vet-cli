@@ -120,6 +120,23 @@
             max-width: 374px;
         }
     }
+    .card__clinic {
+        width: unset;
+    }
+    .reviewBlock {
+        padding: 24px 0px 20px;
+        &__title {
+            max-width: 575px;
+        }
+        &__item {
+            margin-right: unset;
+            width: 100%;
+            &:nth-child(4n + 2),
+            &:nth-child(4n + 3) {
+                width: 100%;
+            }
+        }
+    }
 }
 
 // MAX-WIDTH 1600PX breakpoints END
@@ -288,7 +305,7 @@
     .reviewBlock {
         padding: 24px 0px 20px;
         &__title {
-            max-width: 300px;
+            max-width: 475px;
         }
         &__item {
             margin-right: unset;
@@ -297,6 +314,30 @@
             &:nth-child(4n + 3) {
                 width: 100%;
             }
+        }
+    }
+    .road {
+        &__content {
+            grid-gap: 16px; 
+        }
+        &__card {
+            padding: 20px 17px 37px;
+        }
+    }
+    .location {
+        &__map {
+            img  {
+                max-width: 97%;
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    }
+    .gallery-main {
+        padding: 32px 0px 56px;
+        &__content {
+            grid-template-columns: 1fr;
+            grid-gap: 25px;
         }
     }
 
@@ -474,6 +515,45 @@
             order: 2;
             width: 100%;
             text-align: left;
+        }
+    }
+    .location {
+        margin: 27px 0px 32px;
+        &__content {
+            display: block;
+        }
+        &__info {
+            margin-bottom: 37px;
+        }
+        &__map {
+            img {
+                max-width: 100%;
+                width: 100%;
+                margin-left: unset;
+                margin-right: unset;
+            }
+        }
+    }
+    .road {
+        margin-bottom: 60px;
+        &__text {
+            max-width: unset;
+        }
+        &__content {
+            grid-template-columns: 1fr;
+        }
+    }
+    // !!!   BREADCRUMBS 
+    .breadcrumbs {
+        margin-top: 41px;
+    }
+    .searchContent {
+        padding: 27px 0px 63px;
+        &__count {
+            padding: 13px 0px 27px;
+        }
+        &__item {
+            padding-bottom: 23px;
         }
     }
 
