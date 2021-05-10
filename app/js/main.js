@@ -18,7 +18,8 @@ $(function () {
          {
             breakpoint: 1400,
             settings:{
-               slidesToShow: 2
+               slidesToShow: 2,
+               arrows: true
             }
          }
       ]
@@ -32,7 +33,8 @@ $(function () {
           {
              breakpoint:1400,
              settings:{
-                slidesToShow:3
+                slidesToShow:3,
+                arrows: true
              }
           }
        ]
@@ -44,8 +46,19 @@ $(function () {
    $('.priceBlock__list').masonry({
       itemSelector: '.priceBlock__item',
       columnWidth: '.priceBlock__item',
-      gutter: 40
+      // gutter: 40
    });
+   $(window).on("load resize",(function(){
+      if($(window).width()<"1200"){
+         $('.priceBlock__list').masonry({gutter: 20 });
+         $('.employee__info').find('.h2').unwrap();
+         $('.employee__img').find('.employee__review').unwrap();
+         $('.employee__body').find('.h2, .subtitle, .employee__review').wrapAll('<div class="employee__info">');
+         $('.employee__body').find('.employee__more, .skills__content, img').wrapAll('<div class="employee__img">');
+      }else{ 
+         $('.priceBlock__list').masonry({gutter: 40 });
+      } 
+   }));
    //masonry end
    //switch block
     $('.switch__item').on('click',function(){

@@ -19,6 +19,10 @@
         &__service-text{
             width: unset;
         }
+        &__trick{
+            padding: 17px 15px;
+        }
+        
     }
     .desctop {
         height: unset;
@@ -335,6 +339,9 @@
             margin-right: 20px;
         }
     }
+    .slick-slide, .slick--second-slide {
+        margin: 0 10px;
+    }
     .top-page {
         margin: 16px 0px 32px;
         &__content {
@@ -376,6 +383,7 @@
         }
         &__info {
             width: unset;
+            margin-left: 0;
         }
         &__info-title {
             padding-bottom: 35px;
@@ -434,7 +442,39 @@
             display: flex;
             justify-content: space-around;
         }
-
+    }
+    .priceBlock{
+        &__item{
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            .card__price{
+                padding: 35px 30px;
+            }
+        }
+    }
+    .employee{
+        &__body{
+            display: block;
+            .btn-createSubscribe{
+                display: none;
+            }
+        }
+        &__img{
+            display: flex;
+            flex-wrap: wrap;
+            .skills__content{
+                order: 3;
+                width: 100%;
+            }
+            img{
+                order: 1;
+            }
+        }
+        &__more{
+            order: 2;
+            width: 100%;
+            text-align: left;
+        }
     }
 
 } 

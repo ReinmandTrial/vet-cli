@@ -236,13 +236,14 @@ body {
 		overflow: hidden;
 		display: flex;
 		align-items: center;
-		width: 100%;
+		width: fit-content;
 		height: 400px;
 		margin-bottom: 16px;
 		border-radius: 8px;
 		img{
+			height: 100%;
+			object-fit: cover;
 			display: inline-block;
-			margin: 0 auto;
 		}
 	}
 	&__specialist-title{
