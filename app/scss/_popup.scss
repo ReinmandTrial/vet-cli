@@ -187,11 +187,13 @@
 				max-width: 100%;
 				max-height: 100%;
 				display: inline-block;
+				margin: 0 auto;
 				object-fit: cover;
 				height: 100%;
 			}
 			&.active{
-				display: inline-block;
+				display: inline-flex;
+				align-items: center;
 			}
 		}
 	}

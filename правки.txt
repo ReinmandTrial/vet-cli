@@ -1,17 +1,17 @@
-1. https://reinmandtrial.github.io/vet-cli/app/index.html - Главная (медиа до 992 - осталось на 1400 и ниже пофиксить блок с анимацией)
-2. https://reinmandtrial.github.io/vet-cli/app/service.html - Все услуги (не делали)
-3. https://reinmandtrial.github.io/vet-cli/app/page-service.html - Странница услуги (не делали)
+1. https://reinmandtrial.github.io/vet-cli/app/index.html - Главная (медиа до 992 - готово)
+2. https://reinmandtrial.github.io/vet-cli/app/service.html - Все услуги (медиа до 992 - готово)
+3. https://reinmandtrial.github.io/vet-cli/app/page-service.html - Странница услуги (медиа до 992 - готово)
 4. https://reinmandtrial.github.io/vet-cli/app/priceService.html# - Стоимость (медиа до 992 - готово)
 5. https://reinmandtrial.github.io/vet-cli/app/work.html - График работы (не делали)
 6. https://reinmandtrial.github.io/vet-cli/app/ourSpecialists.html# - Все сотрудники (медиа до 992 - готово)
-7. https://reinmandtrial.github.io/vet-cli/app/employeePage.html - Странница сотрудника (медиа до 992 нужно блок с сотрудником сделать как на мобилке)
+7. https://reinmandtrial.github.io/vet-cli/app/employeePage.html - Странница сотрудника (медиа до 992 - готово)
 8. https://reinmandtrial.github.io/vet-cli/app/contacts.html - Контакты (медиа до 992 - готово)
-9. https://reinmandtrial.github.io/vet-cli/app/stories.html - Истории пациентов (не делали)
+9. https://reinmandtrial.github.io/vet-cli/app/stories.html - Истории пациентов (медиа до 992 - готово)
 10. - Статьи - она же шаблон 9 странницы
-11. https://reinmandtrial.github.io/vet-cli/app/mission.html - Наша миссия (не делали)
-12. https://reinmandtrial.github.io/vet-cli/app/photogallery.html# - Фотогалерея (медиа до 992 - в карточках слово "смотреть" с 1399 кинуть вправо карточки как на мобилке. Сделать слайдер с 1600 до 992, как на мобилке, там пагинация в виде точек появляется вместо картинок) + с десктопа карточки подсвечиваются сзади, нужно дать им бордер радиус
-13. https://reinmandtrial.github.io/vet-cli/app/review.html - Отзывы
-14. https://reinmandtrial.github.io/vet-cli/app/search.html - Поиск 
+11. https://reinmandtrial.github.io/vet-cli/app/mission.html - Наша миссия (медиа до 992 - готово)
+12. https://reinmandtrial.github.io/vet-cli/app/photogallery.html - Фотогалерея (медиа до 992 - готово)
+13. https://reinmandtrial.github.io/vet-cli/app/review.html - Отзывы (медиа до 992 - готово)
+14. https://reinmandtrial.github.io/vet-cli/app/search.html - Поиск (медиа до 992 - готово)
 17. Календарь нужно отверстать)
 
 Попап "оставить отзыв" - доделать чек бокс

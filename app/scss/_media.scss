@@ -137,6 +137,44 @@
             }
         }
     }
+    .servicePrice{
+        .card__price{
+            width: 536px;
+        }
+        &__info{
+            width: 500px;
+        }
+    }
+    .storiesBlock{
+        &__item{
+            width: calc(100%/3 - 80px/3);
+            &:nth-child(7n + 4),
+            &:nth-child(7n + 5),
+            &:nth-child(7n + 6),
+            &:nth-child(7n + 7){
+                width: calc(100%/4 - 120px/4);
+            }
+        }
+    }
+    .missionBlock{
+        .slick--third{
+            margin: 0 45px;
+        }
+        &__slider-content{
+            width: 266px;
+        }
+    }
+    .slider{
+        .slickslide{
+            width: 100%;
+        }
+        .s-prev{
+            left: -90px;
+        }
+        .s-next{
+            right: -90px;
+        }
+    }
 }
 
 // MAX-WIDTH 1600PX breakpoints END
@@ -184,6 +222,10 @@
     }
     .review{
         padding-bottom: 81px;
+        &__body{
+            margin-left: 0;
+            margin-right: auto;
+        }
         &__content{
             justify-content: space-around;
         }
@@ -196,6 +238,7 @@
         }
         &__info{
             padding-top: 45px;
+            margin-left: 0;
         }
         &__info-text{
             padding-bottom: 70px;
@@ -339,8 +382,65 @@
             grid-template-columns: 1fr;
             grid-gap: 25px;
         }
+        .card__clinic{
+            width: 560px;
+        }
     }
+    .serviceDescription{
+        &__content{
+            flex-wrap: wrap;
+        }
+        &__info{
+            order: 2;
+            width: 100%;
+            min-width: unset;
+            img{
+                width: 100%;
+            }
+        }
+        &__button{
+            padding: 0;
+        }
+    }
+    .servicePrice{
+        .card__price{
+            margin-right: 30px;
+        }
+        &__info{
+            width: fit-content;
+        }
+    }
+    .storiesBlock{
+        &__item{
+            margin-right: 20px;
+            margin-bottom: 40px;
+            width: calc(100%/3 - 40px/3);
+            &:nth-child(7n + 4),
+            &:nth-child(7n + 5),
+            &:nth-child(7n + 6),
+            &:nth-child(7n + 7){
+                width: calc(100%/4 - 60px/4);
+            }
+        }
+    }
+    .slider{
+        .slickslide{
+            height: 500px;
+            &-item{
+                height: 100%;
+                width: 100%;
+                img{
+                    height: unset;
 
+                }
+            }
+        }
+    }
+    .popup__gallery{
+        .popup-body{
+            padding: 0 120px;
+        }
+    }
 }
 // MAX-WIDTH 1399.98PX breakpoints END
 
@@ -497,8 +597,24 @@
         &__body{
             display: block;
             .btn-createSubscribe{
-                display: none;
+                margin-top: 20px;
             }
+        }
+        &__info{
+            max-width: unset;
+            .h2{
+                padding-top: 15px;
+                margin-bottom: 4px;
+            }
+            .subtitle{
+                margin-bottom: 11px;
+            }
+        }
+        &__review{
+            margin-bottom: 24px;
+        }
+        &__link{
+            justify-content: left;
         }
         &__img{
             display: flex;
@@ -506,9 +622,11 @@
             .skills__content{
                 order: 3;
                 width: 100%;
+                margin-bottom: 0;
             }
             img{
                 order: 1;
+                margin-bottom: 20px;
             }
         }
         &__more{
@@ -556,7 +674,70 @@
             padding-bottom: 23px;
         }
     }
-
+    .service-popular{    
+        flex-wrap: wrap;
+        margin: -12px;
+        &__item{
+            margin: 12px;
+            border-radius: 8px;
+            width: 30%;
+            &:last-child{
+                border-radius: 8px;
+            }
+            &:first-child{
+                border-radius: 8px;
+            }
+            &:not(:first-child){
+                border: none;
+            }
+        }
+    }
+    .service-all{
+        padding-top: 44px;
+        &__list{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .content--service{
+        .page-header__title{
+            padding-bottom: 19px;
+        }
+    }
+    .servicePrice{
+        .card__price{
+            margin-right: 20px;    
+        }
+    }
+    .storiesBlock{
+        &__item{
+            margin-bottom: 53px;
+            &:nth-child(5n + 1),
+            &:nth-child(5n + 2){
+                width: calc(100%/2 - 40px/2);
+            }
+            &:nth-child(5n + 3),
+            &:nth-child(5n + 4),
+            &:nth-child(5n + 5){
+                width: calc(100%/3 - 80px/3);
+            }
+            &:nth-child(5n + 1),
+            &:nth-child(5n + 3),
+            &:nth-child(5n + 4){
+                margin-right: 40px;
+            }
+            &:nth-child(5n + 2),
+            &:nth-child(5n + 5){
+                margin-right: 0;
+            }
+        }
+    }
+    .popup__review{
+        &-body{
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+    }
 } 
 // MAX-WIDTH 1199.98PX breakpoints END
 

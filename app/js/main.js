@@ -18,6 +18,7 @@ $(function () {
          {
             breakpoint: 1400,
             settings:{
+               infinite: true,
                slidesToShow: 2,
                arrows: true
             }
@@ -31,6 +32,7 @@ $(function () {
        arrows: true,
        responsive:[
           {
+             infinite: true,
              breakpoint:1400,
              settings:{
                 slidesToShow:3,
@@ -39,6 +41,31 @@ $(function () {
           }
        ]
     })
+    $('.slick--third').slick({
+       infinite: true,
+       slidesToShow: 4,
+       slidesToScroll: 1,
+       arrows: true,
+       responsive:[
+          {
+             infinite: true,
+             breakpoint:1601,
+             settings:{
+                slidesToShow:3,
+                arrows: true
+             }
+          },
+          {
+            infinite: true,
+            breakpoint:1250,
+            settings:{
+               slidesToShow:2,
+               arrows: true
+            }
+          }
+       ]
+    })
+
     $('.slick-next').html('<span class="icon icon-angle-right"></span>');
     $('.slick-prev').html('<span class="icon icon-angle-left"></span>');
    //  Слайдер конец 

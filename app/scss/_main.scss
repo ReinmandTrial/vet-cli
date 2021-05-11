@@ -567,18 +567,23 @@
     margin-top: 46px;
     display: flex;
     width: 100%;
-    background: $accent;
     transition: all .5s;
-    border-radius: 8px;
-    &:hover{
-        background: #2BD9BC;
-    }
     &__item{
         width: inherit;
         text-align: center;
         padding: 28px 0 36px;
+        background: $accent;
         &:not(:first-child){
             border-left: 1px solid $accentDark;
+        }
+        &:hover{
+            background: #2BD9BC;
+        }
+        &:first-child{
+            border-radius: 8px 0 0 8px;
+        }
+        &:last-child{
+            border-radius: 0 8px 8px 0;
         }
     }
     &__title{
@@ -754,7 +759,7 @@
     padding-bottom: 136px;
     background: $background2;
     &__content{
-        max-width: 544px;
+        max-width: 824px;
         img{
             width: 100%;
         }
@@ -771,11 +776,21 @@
         color: $text1;
     }
     &__slider-item{
-        background: $white;
         width: 266px;
         height: 376px;
+        text-align: center;
+    }
+    &__slider-content{
+        display: inline-block;
+        background: $white;
         box-shadow: 0px 4px 20px rgba(26, 57, 63, 0.1);
         border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
 }
 
