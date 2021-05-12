@@ -5,10 +5,26 @@
     width: 100%;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 10;
     background: $white;
+    .btn-createSubscribe{
+        display: none;   
+        margin-left: auto;
+        border-radius: 0;
+    }
 }
-
+.burger{
+    width: 72px;
+    height: 72px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: $accent;
+    color: $white;
+    .icon-burger{
+        font-size: 24px;
+    }
+}
 .logo {
     width: 300px;
     height: 96px;
@@ -330,7 +346,7 @@
     padding-bottom: 136px;
     &__header{
         display: flex;
-        padding-bottom: 62px;
+        padding-bottom: 16px;
         align-items: flex-end;
     }
     &__title{
@@ -363,7 +379,7 @@
     .specialists__header--choice{
         justify-content: space-between;
         align-items: start;
-        padding: 0;
+        padding: 0 0 6px 0;
     }
     .specialists__slider--choice{
         padding-top: 38px;
@@ -377,7 +393,7 @@
         display: flex;
         align-items: flex-end;
         padding-top: 130px;
-        padding-bottom: 62px;
+        padding-bottom: 32px;
     }
     &__title{
         width: 785px;
@@ -401,7 +417,9 @@
             object-fit: cover;
         }
     }
-
+    .slick-arrow{
+        background: $background3;
+    }
 }
 
 .blog{

@@ -22,6 +22,14 @@ $(function () {
                slidesToShow: 2,
                arrows: true
             }
+         },
+         {
+            breakpoint: 767,
+            settings:{
+               arrows: false,
+               slidesToShow: 3
+            }
+
          }
       ]
     });
@@ -38,6 +46,14 @@ $(function () {
                 slidesToShow:3,
                 arrows: true
              }
+          },
+          {
+             breakpoint: 767,
+             settings:{
+                arrows: false,
+                slidesToShow: 3
+             }
+ 
           }
        ]
     })
@@ -62,6 +78,14 @@ $(function () {
                slidesToShow:2,
                arrows: true
             }
+          },
+          {
+             breakpoint: 767,
+             settings:{
+                arrows: false,
+                slidesToShow: 3
+             }
+ 
           }
        ]
     })
@@ -69,6 +93,14 @@ $(function () {
     $('.slick-next').html('<span class="icon icon-angle-right"></span>');
     $('.slick-prev').html('<span class="icon icon-angle-left"></span>');
    //  Слайдер конец 
+   //burger menu 
+   $('.burger').on('click',function(){
+      // $(this).closest('.wrapper').toggleClass('burger-open');
+      $('.wrapper').toggleClass('open');
+      $('.burger').find('.icon').toggleClass('icon-burger');
+      $('.burger').find('.icon').toggleClass('icon-close');
+   })
+   //burger menu end
    //masonry start
    $('.priceBlock__list').masonry({
       itemSelector: '.priceBlock__item',

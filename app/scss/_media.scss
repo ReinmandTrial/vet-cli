@@ -743,18 +743,264 @@
 
 // MAX-WIDTH 991.98PX breakpoints START
 @media (max-width: 991.98px) {
-    
+    .wrapper{
+        &.open{
+            .sidebar{
+                left: 0;
+            }
+            .phone{
+                left: 72px;
+            }
+        }
+    }
+    .sidebar{
+        top: 72px;
+        left: -100%;
+        z-index: 10;
+        transition: all 0.4s ease;
+        background: $background1;
+        padding-top: 0;
+        border: none;
+        &__footer{
+            display: none;
+        }
+        .menu{
+            padding: 28px 0 0 24px;
+        }
+    }
+    .burger{
+        display: flex;
+    }
+    .header{
+        height: 72px;
+        border: none;
+        .logo{
+            height: 72px;
+            background: $white;
+        }
+        .logo__img{
+            height: 100%;
+            padding: 10px 0;
+            img{
+                height: 100%;
+
+            }
+        }
+        .search{
+            display: none;
+        }
+        .phone{
+            position: fixed;
+            left: -100%;
+            top: 0;
+            height: 72px;
+            padding: 0;
+            width: calc(100% - 72px);
+            display: flex;
+            background: $white;
+            transition: all 0.4s ease;
+            &__number{
+                margin-left: auto;
+                padding-right: 16px;
+                display: flex;
+                align-items: center;
+                color: $accent;
+            }
+            &__button{
+                padding: 0 25px;
+                color: white;
+                background: $accent;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .btn-createSubscribe{
+            display: block;
+        }
+    }
+    .content{
+        padding-top: 72px;
+    }
+    .main{
+        padding-left: 0;
+    }
+    .footer{
+        padding-left: 0;
+        &__text{
+            width: unset;
+        }
+    }
+    .specialists{
+        .slick-slide{
+            div{
+                display: flex;
+            }
+        }
+        &__slider-item{
+            width: fit-content !important;
+        }
+        .card{
+            &__specialist-img{
+                height: 280px;
+            }
+        }
+        .slick{
+            margin: 0 -29px;
+            width: 750px;
+        }
+    }
 }
 // MAX-WIDTH 991.98PX breakpoints END
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
+    // fonts 
+    //fonts end
+    .footer{
+        &__copyright{
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        &__copyright-info{
+            width: 100%;
+            order: 2;
+        }
+        &__copyright-link{
+            width: 100%;
+        }
+
+    }
+    .popular{
+        .slick{
+            margin: 0 -29px;
+            width: 740px;
+        }
+        .slick-slide{
+            margin: 0 8px;
+        }
+        &__slider-item{
+            padding: 20px;
+            height: 168px;
+        }
+        .card{
+            &__service-title{
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &__service-text{
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+    }
+    .specialists{
+        .card{
+            &__specialist-title{
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &__specialist-text{
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+    }
+    .stories{
+        .slick{
+            &--second{
+                margin: 0 -29px;
+                width: 750px;
+            }
+            &-slide{
+                margin: 0 8px;
+            }
+        }
+        .card{
+            &__animals-title{
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &__animals-date{
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+    }
+    .missionBlock{
+        .slick--third{
+            margin: 0 10px;
+            width: 750px;
+        }
+        &__slider-content{
+            width: 242px;
+        }
+    }
 
 }
 // MAX-WIDTH 767.98PX breakpoints END
 
 // MAX-WIDTH 576.98PX breakpoints START 
 @media (max-width: 575.98px) {
+    // Шрифты 
+    .mini-text{
+        font-size: 12px;
+        line-height: 14px;
+    }
 
+    // Шрифты конец
+    .burger{
+        width: 48px;
+        height: 48px;
+    }
+    .sidebar{
+        width: 100%;
+        top: 48px;
+    }
+    .content{
+        padding-top: 48px;
+    }
+    .header{
+        height: 48px;
+        .logo{
+            height: 48px;
+            width: unset;
+        }
+        .logo__img{
+            margin-left: 10px;
+        }
+        .phone{
+            height: 48px;
+            left: -100%;
+            width: calc(100% - 48px);
+            &__button{
+                font-size: 12px;
+                line-height: 12px;
+                text-align: center;
+                width: 104px;
+            }
+        }
+        .btn-createSubscribe{
+            font-size: 11px;
+            line-height: 11px;
+            padding: 0 17px;
+            text-align: center;
+            width: 104px;
+        }
+
+    }
+    .wrapper.open{
+        .phone{
+            left: 48px;
+        }
+    }
+    .footer{
+        &__instagram-title{
+            font-size: 12px;
+            line-height: 14px;
+        }
+        &__instagram-img{
+            width: 100px;
+        }
+    }
 }
 // MAX-WIDTH 576.98PX breakpoints END 
