@@ -436,11 +436,6 @@
             }
         }
     }
-    .popup__gallery{
-        .popup-body{
-            padding: 0 120px;
-        }
-    }
 }
 // MAX-WIDTH 1399.98PX breakpoints END
 
@@ -935,7 +930,13 @@
             width: 242px;
         }
     }
-
+    .create{
+        &-body{
+            width: 100%;
+            margin: 0 !important;
+            border-radius: 0;
+        }
+    }
 }
 // MAX-WIDTH 767.98PX breakpoints END
 

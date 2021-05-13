@@ -195,7 +195,7 @@
       <div class="popup popup__review">
          <div class="popup-bg"></div>
          <div class="popup-body popup__review-body">
-            <div class="span popup-close popup-close__icon">X</div>
+            <div class="popup-close popup-close__icon"><i class="icon icon-close"></i></div>
             <h5 class="h5 popup__review-title"></h5>
             <p class="popup__review-text"></p>
          </div>
@@ -205,7 +205,7 @@
       <div class="popup createReview">
          <div class="popup-bg"></div>
          <div class="popup-body create-body">
-            <div class="span popup-close popup-close__icon">X</div>
+            <div class="popup-close popup-close__icon"><i class="icon icon-close"></i></div>
             <h2 class="h2 create-title">Оставить отзыв</h2>
             <span class="create-subtitle">Специалист</span>
             <div class="select">
@@ -228,13 +228,20 @@
                <input class="create__data-input" type="text">
             </div>
             <div class="create__data">
-               <span class="create__data-title">E-mail для ответа </span>
+               <span class="create__data-title">E-mail для ответа
+                  <span class="create__data-subtitle mini-text">например, кот Кокос</span>
+               </span>
                <input class="create__data-input" type="text">
             </div>
             <div class="create__data">
-               <input class="create__data-check" type="checkbox">
-               <span class="create__data-title"><span class="mini-text">Я согласен с</span>условиями обработки
-                  персональных данных</span>
+               <div class="checkBox">
+                  <input type="checkbox" id="checkBox__creat1" class="checkBox__creat">
+                  <label for="checkBox__creat1" class="label__creat">
+                     <span class="create__data-title"><span class="mini-text">Я согласен с </span>условиями обработки
+                        персональных
+                        данных</span>
+                  </label>
+               </div>
                <button class="btn btn-secondary">Отправить</button>
             </div>
          </div>

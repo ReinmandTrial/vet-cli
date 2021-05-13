@@ -77,7 +77,7 @@
         <div class="sidebar__footer">
           <h3 class="sidebar__footer-title">Работаем для вас</h3>
           <p class="sidebar__footer-description">ежедневно и круглосуточно</p>
-          <button class="btn btn-primary">Записаться на прием</button>
+          <button class="btn btn-primary btn-createSubscribe">Записаться на прием</button>
         </div>
       </sidebar>
       <!-- SIDEBAR end  -->
@@ -114,6 +114,69 @@
 
   </div>
   <!-- WRAPPER end -->
+
+  <!-- Попап на "Записаться на прием"  -->
+  <div class="popup createSubscribe">
+    <div class="popup-bg"></div>
+    <div class="popup-body create-body">
+      <div class="span popup-close popup-close__icon"><i class="icon icon-close"></i></div>
+      <h2 class="h2 create-title">Запись на прием</h2>
+      <div class="create__data">
+        <span class="create__data-title">Имя и фамилия</span>
+        <span class="create__data-body"><input class="create__data-input" type="text"></span>
+      </div>
+      <div class="create__data">
+        <span class="create__data-title">Телефон</span>
+        <span class="create__data-body"><input class="create__data-input" type="text"></span>
+      </div>
+      <div class="create__data">
+        <span class="create__data-title">Филиал центра</span>
+        <div class="create__data-body">
+          <div class="switch">
+            <ul class="switch__list">
+              <li class="switch__item active">Строгино</li>
+              <li class="switch__item">Донской</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="create__data">
+        <span class="create__data-title">Дата приема</span>
+        <div class="create__data-body">
+          <div class="create__data-calendar">
+            <input type="text">
+            <i class="icon icon-calendar"></i>
+          </div>
+        </div>
+      </div>
+      <div class="create__data">
+        <span class="create__data-title">Кто ваш питомец?
+          <span class="create__data-subtitle mini-text">например, кот Кокос</span>
+        </span>
+        <span class="create__data-body"><input class="create__data-input" type="text"></span>
+      </div>
+      <div class="create__data">
+        <span class="create__data-title">Сообщение <span class="mini-text">(Необязательно) <br>
+            Можете описать проблему вашего питомца или указать
+            специалиста, к которому хотите попасть на прием
+          </span>
+        </span>
+      </div>
+      <textarea name="reviewArea" class="create-area"></textarea>
+      <div class="create__data">
+        <div class="checkBox">
+          <input type="checkbox" id="checkBox__creat" class="checkBox__creat">
+          <label for="checkBox__creat" class="label__creat">
+            <span class="create__data-title"><span class="mini-text">Я согласен с </span>условиями обработки
+              персональных
+              данных</span>
+          </label>
+        </div>
+        <button class="btn btn-secondary">Записаться</button>
+      </div>
+    </div>
+  </div>
+  <!-- Конец попапа на "Записаться на прием"  -->
 
 
 

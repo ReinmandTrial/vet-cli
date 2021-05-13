@@ -88,14 +88,12 @@ $(function () {
  
           }
        ]
-    })
-
+    });
     $('.slick-next').html('<span class="icon icon-angle-right"></span>');
     $('.slick-prev').html('<span class="icon icon-angle-left"></span>');
    //  Слайдер конец 
    //burger menu 
    $('.burger').on('click',function(){
-      // $(this).closest('.wrapper').toggleClass('burger-open');
       $('.wrapper').toggleClass('open');
       $('.burger').find('.icon').toggleClass('icon-burger');
       $('.burger').find('.icon').toggleClass('icon-close');
@@ -116,7 +114,7 @@ $(function () {
          $('.employee__body').find('.employee__more, .skills__content, img').wrapAll('<div class="employee__img">');
       }else{ 
          $('.priceBlock__list').masonry({gutter: 40 });
-      } 
+      }
    }));
    //masonry end
    //switch block
@@ -248,6 +246,7 @@ $('.review__dots-item').on('click',function(){
 //    // $('.popup').show();
 // })
 $('.popup-close').on('click',function(){
+   $('.slickslide').slick("unslick");
    $(this).closest('.popup').removeClass('open');
 })
 //popup end
@@ -324,6 +323,28 @@ $(document).mouseup(function (e) {
 // select end 
 // popup photogallery
 $('.card__clinic').on('click',function(){
+   $('.slickslide').slick({
+     infinite: true,
+     slidesToShow:1,
+     slidesToScroll:1,
+     arrows:true,
+     dots:true,   
+     dotsClass: 'slick-dots slider__dots',
+     customPaging: function(slick, index) {
+         var image = $(slick.$slides[index]).find('.slickslide-img').attr('src');
+         return '<img src="' + image + '" alt="" /> <span class="slickslide-bg"></span>'
+      }
+
+   });
+   $('.slickslide-nav').slick({
+     infinite: true,
+     slidesToShow:1,
+     slidesToScroll:1,
+     arrows:true,
+     dots:false
+   })
+   $('.slick-next').html('<span class="icon icon-angle-right"></span>');
+   $('.slick-prev').html('<span class="icon icon-angle-left"></span>');
    $('.popup__gallery').addClass('open');
 })
 // popup photogallery end 
@@ -380,7 +401,6 @@ $('.s-prev').on('click',function(index){
          }
       }
    })
-   console.log(i)
    $(navSlideItem).each(function(index){
       if(index + 1 === i){
          $(this).addClass('active');
