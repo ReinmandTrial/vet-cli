@@ -7,6 +7,7 @@
    display: none;
    text-align: center;
    z-index: 999;
+	overflow: auto;
 	&-bg{
 		background: $popupBacground;
 		opacity: .9;
@@ -51,9 +52,28 @@
 		right: 36px;
 		top: 36px;
 	}
+	&-date{
+		display: none;
+		color: $text3;
+	}
 }
 
 // popup review end 
+//popup request 
+.popupRequest{
+	.create{
+		&-body{
+			width: 720px;
+		}
+		&__data{
+			padding-bottom: 20px;
+		}
+	}
+	.btn{
+		width: 235px;
+	}
+}
+//popup request end
 //popup create (tamplate)
 
 .create{
@@ -101,6 +121,9 @@
 			font-weight: 400;
 			color: $text3;
 		}
+		a{
+			font-weight: 700;
+		}
 	}
 	&__data-body{
 		width: 284px;
@@ -142,16 +165,41 @@
 			cursor: pointer;
 		}
 	}
+	&__data-checkBox{
+		.create__data-title{
+			font-weight: 400;
+		}
+	}
 }
 .createSubscribe{
-	.create-body{
-		margin: 24px 0 0;
+	.create{
+		&-body{
+			margin: 24px 0 0;
+		}
+		&__calendar{
+			margin-bottom: 16px;
+		}
+		&__data-massage{
+			padding: 19px 0 10px;
+		}
+		&-area{
+			margin: 0 0 40px;
+		}
+		&__switch{
+			margin-top: 16px;
+		}
 	}
 }
 //popup create end
 
 //popup createReview
-
+.createReview{
+	.create{
+		&__data-checkBox{
+			padding-top: 35px;
+		}
+	}
+}
 //popup createReview end
 // popup gallery
 

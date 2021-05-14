@@ -239,14 +239,10 @@ $('.review__dots-item').on('click',function(){
 //review slider end
 
 //popup start
-// $('.btn-popup').on('click',function(){
-//    if($(this).hasClass('.popup-template')){
-//       $('.popup-template').show();
-//    }
-//    // $('.popup').show();
-// })
 $('.popup-close').on('click',function(){
-   $('.slickslide').slick("unslick");
+   if($('.popup__gallery').hasClass('open')){
+      $('.slickslide').slick("unslick");
+   }
    $(this).closest('.popup').removeClass('open');
 })
 //popup end
@@ -256,8 +252,10 @@ $('.card__review-more').on('click',function(){
    var popup = $('.popup__review');
    var title = btn.closest('.card__review').find('.card__review-title').html();
    var text = btn.closest('.card__review').find('.card__review-text').html();
+   var date = btn.closest('.card__review').find('.card__review-date').html();
    popup.find('.popup__review-title').html(title);
    popup.find('.popup__review-text').html(text);
+   popup.find('.popup__review-date').html(date);
    popup.addClass('open');
 })
 
@@ -287,21 +285,6 @@ $('.btn-createSubscribe').on('click',function(){
 })
 //popup-createSubscribe
 // select start 
-$(function(){
-   // var select = $('.select');
-   // var items = select.find('.select-list').find('.select-item');
-   // var title = select.find('.select__header-title');
-   // if(!$('.content').hasClass('content--employee')){
-   //    $(items).each(function(){
-   //       if($(this).is(':first-child')){
-   //          title.html($(this).html());
-   //       }
-   //    })
-   // }else{
-   //    title.html($('.content--employee').find('.employee__info').find('h1.h2').html());
-   // }
-   
-})
 $('.select__header').on('click',function(){
    var select = $(this).closest('.select');
    select.toggleClass('open');
@@ -314,7 +297,6 @@ $('.select-item').on('click',function(){
 })
 $(document).mouseup(function (e) {
    var container = $(".select");
-   // var body = container.find('.select__body');
    var header = container.find('.select__header');
    if (header.has(e.target).length === 0){
       container.removeClass('open');
@@ -333,21 +315,29 @@ $('.card__clinic').on('click',function(){
      customPaging: function(slick, index) {
          var image = $(slick.$slides[index]).find('.slickslide-img').attr('src');
          return '<img src="' + image + '" alt="" /> <span class="slickslide-bg"></span>'
-      }
+      },
+      responsive:[
+         {
+            breakpoint:991,
+            settings:{
+               arrows:false,
+               // autoplay:true,
+               // autoplaySpeed: 2000
+            }
+         }
+      ]
 
    });
-   $('.slickslide-nav').slick({
-     infinite: true,
-     slidesToShow:1,
-     slidesToScroll:1,
-     arrows:true,
-     dots:false
-   })
    $('.slick-next').html('<span class="icon icon-angle-right"></span>');
    $('.slick-prev').html('<span class="icon icon-angle-left"></span>');
    $('.popup__gallery').addClass('open');
 })
 // popup photogallery end 
+//popup request
+$('.btn-request').on('click',function(){
+   $('.popupRequest').toggleClass('open');
+})
+//popup request end
 //slider photogallery 
 var i = 1;
 $('.s-next').on('click',function(){

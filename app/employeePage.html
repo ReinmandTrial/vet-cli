@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Страница сотрудника</title>
+  <title>Главная</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,7 +15,9 @@
 
     <!-- HEADER start  -->
     <header class="header">
-
+      <div class="burger">
+        <span class="icon icon-burger"></span>
+      </div>
       <div class="logo">
         <a class="logo__img" href="#">
           <img src="images/logo.png" alt="logo">
@@ -39,9 +41,9 @@
 
       <div class="phone">
         <div class="phone__number h5">+7 (499) 110-23-03</div>
-        <a class="phone__button">Заказать звонок</a>
+        <a class="phone__button btn-request">Заказать звонок</a>
       </div>
-
+      <button class="btn btn-primary btn-createSubscribe">Записаться на прием</button>
     </header>
     <!-- HEADER end  -->
 
@@ -56,16 +58,16 @@
             <li class="menu__item"><a href="#" class="menu__link">Стоимость</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Сотрудники</a></li>
             <li class="menu__item"><a href="#" class="menu__link">График работы</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">О клинике <span
-                  class="icon icon-angle-down"></span></a>
+            <li class="menu__item">
+              <a href="#" class="menu__link">О клинике <span class="icon icon-angle-down"></span></a>
               <ul class="menu__list--second">
                 <li class="menu__item--second"><a href="#" class="menu__link--second">Наша миссия</a></li>
                 <li class="menu__item--second"><a href="#" class="menu__link--second">Фотогалерея</a></li>
                 <li class="menu__item--second"><a href="#" class="menu__link--second">Отзывы</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a href="#" class="menu__link">Полезное <span
-                  class="icon icon-angle-down"></span></a>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Полезное <span class="icon icon-angle-down"></span></a>
               <ul class="menu__list--second">
                 <li class="menu__item--second"><a href="#" class="menu__link--second">Истории пациентов</a></li>
                 <li class="menu__item--second"><a href="#" class="menu__link--second">Статьи</a></li>
@@ -81,6 +83,7 @@
         </div>
       </sidebar>
       <!-- SIDEBAR end  -->
+
 
       <!-- CONTENT start  -->
       <div class="content content--employee">
@@ -325,6 +328,152 @@
 
     </main>
     <!-- MAIN end -->
+    <!-- POPUP  -->
+    <!-- Попап на "оставить отзыв"  -->
+    <div class="popup createReview">
+      <div class="popup-bg"></div>
+      <div class="popup-body create-body">
+        <div class="span popup-close popup-close__icon"><i class="icon icon-close"></i></div>
+        <h2 class="h2 create-title">Оставить отзыв</h2>
+        <span class="create-subtitle">Специалист</span>
+        <div class="select">
+          <div class="select__header">
+            <span class="select__header-title"></span>
+            <span class="icon icon-angle-down"></span>
+          </div>
+          <div class="select__body">
+            <ul class="select-list">
+              <li class="select-item">Ярославская Екатерина Ивановна</li>
+              <li class="select-item">Малицкая Валерия Викторовна</li>
+              <li class="select-item">Савченко Екатерина Сергеевна</li>
+              <li class="select-item">Малицкая Валерия Викторовна</li>
+            </ul>
+          </div>
+        </div>
+        <textarea name="reviewArea" class="create-area"></textarea>
+        <div class="create__data">
+          <span class="create__data-title">Ваше имя</span>
+          <input class="create__data-input" type="text">
+        </div>
+        <div class="create__data">
+          <span class="create__data-title">E-mail для ответа
+            <span class="create__data-subtitle mini-text">например, кот Кокос</span>
+          </span>
+          <input class="create__data-input" type="text">
+        </div>
+        <div class="create__data create__data-checkBox">
+          <div class="checkBox">
+            <input type="checkbox" id="checkBox__creat1" class="checkBox__creat">
+            <label for="checkBox__creat1" class="label__creat">
+              <span class="create__data-title">Я согласен с <a href="#">условиями обработки
+                  персональных
+                  данных</a></span>
+            </label>
+          </div>
+          <button class="btn btn-secondary">Отправить</button>
+        </div>
+      </div>
+    </div>
+    <!-- Конец попапа на "оставить отзыв"  -->
+    <!-- Попап на отзывы  -->
+    <div class="popup popup__review">
+      <div class="popup-bg"></div>
+      <div class="popup-body popup__review-body">
+        <div class="span popup-close popup-close__icon"><i class="icon icon-close"></i></div>
+        <h5 class="h5 popup__review-title"></h5>
+        <p class="popup__review-text"></p>
+        <span class="popup__review-date"></span>
+      </div>
+    </div>
+    <!-- Конец попапа на отзывы  -->
+    <!-- Попап на "Записаться на прием"  -->
+    <div class="popup createSubscribe">
+      <div class="popup-bg"></div>
+      <div class="popup-body create-body">
+        <div class="popup-close popup-close__icon"><i class="icon icon-close"></i></div>
+        <h2 class="h2 create-title">Запись на прием</h2>
+        <div class="create__data">
+          <span class="create__data-title">Имя и фамилия</span>
+          <span class="create__data-body"><input class="create__data-input" type="text"></span>
+        </div>
+        <div class="create__data">
+          <span class="create__data-title">Телефон</span>
+          <span class="create__data-body"><input class="create__data-input" type="text"></span>
+        </div>
+        <div class="create__data create__switch">
+          <span class="create__data-title">Филиал центра</span>
+          <div class="create__data-body">
+            <div class="switch">
+              <ul class="switch__list">
+                <li class="switch__item active">Строгино</li>
+                <li class="switch__item">Донской</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="create__data create__calendar">
+          <span class="create__data-title">Дата приема</span>
+          <div class="create__data-body">
+            <div class="create__data-calendar">
+              <input type="text">
+              <i class="icon icon-calendar"></i>
+            </div>
+          </div>
+        </div>
+        <div class="create__data">
+          <span class="create__data-title">Кто ваш питомец?
+            <span class="create__data-subtitle mini-text">например, кот Кокос</span>
+          </span>
+          <span class="create__data-body"><input class="create__data-input" type="text"></span>
+        </div>
+        <div class="create__data create__data-massage">
+          <span class="create__data-title">Сообщение <span class="mini-text">(Необязательно) <br>
+              Можете описать проблему вашего питомца или указать
+              специалиста, к которому хотите попасть на прием
+            </span>
+          </span>
+        </div>
+        <textarea name="reviewArea" class="create-area"></textarea>
+        <div class="create__data  create__data-checkBox">
+          <div class="checkBox">
+            <input type="checkbox" id="checkBox__creat2" class="checkBox__creat">
+            <label for="checkBox__creat2" class="label__creat">
+              <span class="create__data-title">Я согласен с <a href="#">условиями обработки
+                  персональных
+                  данных</a></span>
+            </label>
+          </div>
+          <button class="btn btn-secondary">Записаться</button>
+        </div>
+      </div>
+    </div>
+    <!-- Конец попапа на "Записаться на прием"  -->
+
+    <!-- Попап "Заказать звонок"   -->
+    <div class="popup popupRequest">
+      <div class="popup-bg"></div>
+      <div class="popup-body create-body">
+        <div class="popup-close popup-close__icon"><i class="icon icon-close"></i></div>
+        <h2 class="h2 create-title">Заказать звонок</h2>
+        <div class="create__data">
+          <span class="create__data-title">Введите номер телефона</span>
+          <span class="create__data-body"><input class="create__data-input" type="text"></span>
+        </div>
+        <div class="create__data  create__data-checkBox">
+          <div class="checkBox">
+            <input type="checkbox" id="checkBox__creat2" class="checkBox__creat">
+            <label for="checkBox__creat2" class="label__creat">
+              <span class="create__data-title">Я согласен с <a href="#">условиями обработки
+                  персональных
+                  данных</a></span>
+            </label>
+          </div>
+          <button class="btn btn-secondary">Перезвоните мне</button>
+        </div>
+      </div>
+    </div>
+    <!-- Конец попапа "Заказать звонок"    -->
+    <!-- POPUP END  -->
 
     <!-- FOOTER start  -->
     <footer class="footer">
@@ -350,127 +499,6 @@
 
   </div>
   <!-- WRAPPER end -->
-
-
-  <!-- Попап на "оставить отзыв"  -->
-  <div class="popup createReview">
-    <div class="popup-bg"></div>
-    <div class="popup-body create-body">
-      <div class="span popup-close popup-close__icon"><i class="icon icon-close"></i></div>
-      <h2 class="h2 create-title">Оставить отзыв</h2>
-      <span class="create-subtitle">Специалист</span>
-      <div class="select">
-        <div class="select__header">
-          <span class="select__header-title"></span>
-          <span class="icon icon-angle-down"></span>
-        </div>
-        <div class="select__body">
-          <ul class="select-list">
-            <li class="select-item">Ярославская Екатерина Ивановна</li>
-            <li class="select-item">Малицкая Валерия Викторовна</li>
-            <li class="select-item">Савченко Екатерина Сергеевна</li>
-            <li class="select-item">Малицкая Валерия Викторовна</li>
-          </ul>
-        </div>
-      </div>
-      <textarea name="reviewArea" class="create-area"></textarea>
-      <div class="create__data">
-        <span class="create__data-title">Ваше имя</span>
-        <input class="create__data-input" type="text">
-      </div>
-      <div class="create__data">
-        <span class="create__data-title">E-mail для ответа
-          <span class="create__data-subtitle mini-text">например, кот Кокос</span>
-        </span>
-        <input class="create__data-input" type="text">
-      </div>
-      <div class="create__data">
-        <div class="checkBox">
-          <input type="checkbox" id="checkBox__creat1" class="checkBox__creat">
-          <label for="checkBox__creat1" class="label__creat">
-            <span class="create__data-title"><span class="mini-text">Я согласен с </span>условиями обработки
-              персональных
-              данных</span>
-          </label>
-        </div>
-        <button class="btn btn-secondary">Отправить</button>
-      </div>
-    </div>
-  </div>
-  <!-- Конец попапа на "оставить отзыв"  -->
-  <!-- Попап на отзывы  -->
-  <div class="popup popup__review">
-    <div class="popup-bg"></div>
-    <div class="popup-body popup__review-body">
-      <div class="span popup-close popup-close__icon"><i class="icon icon-close"></i></div>
-      <h5 class="h5 popup__review-title"></h5>
-      <p class="popup__review-text"></p>
-    </div>
-  </div>
-  <!-- Конец попапа на отзывы  -->
-  <!-- Попап на "Записаться на прием"  -->
-  <div class="popup createSubscribe">
-    <div class="popup-bg"></div>
-    <div class="popup-body create-body">
-      <div class="popup-close popup-close__icon"><i class="icon icon-close"></i></div>
-      <h2 class="h2 create-title">Запись на прием</h2>
-      <div class="create__data">
-        <span class="create__data-title">Имя и фамилия</span>
-        <span class="create__data-body"><input class="create__data-input" type="text"></span>
-      </div>
-      <div class="create__data">
-        <span class="create__data-title">Телефон</span>
-        <span class="create__data-body"><input class="create__data-input" type="text"></span>
-      </div>
-      <div class="create__data">
-        <span class="create__data-title">Филиал центра</span>
-        <div class="create__data-body">
-          <div class="switch">
-            <ul class="switch__list">
-              <li class="switch__item active">Строгино</li>
-              <li class="switch__item">Донской</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="create__data">
-        <span class="create__data-title">Дата приема</span>
-        <div class="create__data-body">
-          <div class="create__data-calendar">
-            <input type="text">
-            <i class="icon icon-calendar"></i>
-          </div>
-        </div>
-      </div>
-      <div class="create__data">
-        <span class="create__data-title">Кто ваш питомец?
-          <span class="create__data-subtitle mini-text">например, кот Кокос</span>
-        </span>
-        <span class="create__data-body"><input class="create__data-input" type="text"></span>
-      </div>
-      <div class="create__data">
-        <span class="create__data-title">Сообщение <span class="mini-text">(Необязательно) <br>
-            Можете описать проблему вашего питомца или указать
-            специалиста, к которому хотите попасть на прием
-          </span>
-        </span>
-      </div>
-      <textarea name="reviewArea" class="create-area"></textarea>
-      <div class="create__data">
-        <div class="checkBox">
-          <input type="checkbox" id="checkBox__creat2" class="checkBox__creat">
-          <label for="checkBox__creat2" class="label__creat">
-            <span class="create__data-title"><span class="mini-text">Я согласен с </span>условиями обработки
-              персональных
-              данных</span>
-          </label>
-        </div>
-        <button class="btn btn-secondary">Записаться</button>
-      </div>
-    </div>
-  </div>
-  <!-- Конец попапа на "Записаться на прием"  -->
-
   <!-- SCRIPTS start  -->
   <script src="js/main.min.js"></script>
 </body>

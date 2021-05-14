@@ -423,17 +423,20 @@
             }
         }
     }
-    .slider{
-        .slickslide{
-            height: 500px;
-            &-item{
-                height: 100%;
-                width: 100%;
-                img{
-                    height: unset;
-
+    .popup__gallery{
+        .slider{
+            width: 900px;
+            .slick-arrow{
+                &.slick-next{
+                    right: -100px;
+                }
+                &.slick-prev{
+                    left: -100px;
                 }
             }
+        }
+        .popup__subtitle{
+            padding-bottom: 50px;
         }
     }
 }
@@ -733,6 +736,16 @@
             margin-top: 10%;
         }
     }
+    .popup__gallery{
+        .slickslide{
+            &-item{
+                height: 400px;
+            }
+        }
+        .slider{
+            width: 700px;
+        }
+    }
 } 
 // MAX-WIDTH 1199.98PX breakpoints END
 
@@ -844,6 +857,11 @@
             width: 750px;
         }
     }
+    .popup__gallery{
+        .popup-close__icon{
+            right: 36px;
+        }
+    }
 }
 // MAX-WIDTH 991.98PX breakpoints END
 
@@ -937,6 +955,129 @@
             border-radius: 0;
         }
     }
+    .popup__gallery{
+        .slider{
+            width: 95%;
+        }
+        .slider__dots{
+            li{
+                border: none;
+                width: 6px;
+                height: 6px;
+                background: $white;
+                border-radius: 50%;
+                &.slick-active{
+                    background-color: $accent;
+                }
+            }
+            img{
+                display: none;
+            }
+            .slickslide-bg{ 
+                display: none !important;
+            }
+        }
+        .popup__title{
+            padding-bottom: 0;
+        }
+        .popup-close__icon{
+            font-size: 24px;
+            color: $accent;
+            right: 12px;
+            top: 12px;
+        }
+    }
+    .popup{
+        input{
+            width: 100%;
+        }
+        .popup-close__icon{
+            font-size: 24px;
+            color: $accent;
+            right: 12px;
+            top: 12px;
+        }
+        .popup-body{
+            height: 100vh;
+        }
+        .create{
+            &__data{
+                display: block;
+                padding-bottom: 20px;
+            }
+            &__data-title{
+                display: inline-block;
+                padding-bottom: 8px;
+            }
+            &__data-subtitle{
+                position: unset;
+                display: block;
+                width: 100%;
+            }
+        }
+        .btn{
+            width: 100%;
+            padding-top: 11px;
+            padding-bottom: 13px;
+        }
+    }
+    .popup__review{
+        &-body{
+            width: 100%;
+            margin: 0;
+            padding: 50px;
+        }
+    }
+    .createReview{
+        .create{
+            &__data-checkBox{
+                padding-top: 10px;
+            }
+        }
+    }
+    .popupRequest{
+        .popup-body{
+            width: 100%;
+        }
+    }
+    .createSubscribe{
+        .popup-body{
+            height: auto;
+            padding: 66px 60px 112px;
+        }
+        .create{
+            &__calendar{
+                margin: 0;
+                input{
+                    width: auto;
+                }
+                .create__data-body{
+                    width: 100%;
+                }
+                .create__data-calendar{
+                    width: 100%;
+                }
+            }
+            &__switch{
+                margin-top: 0;
+                .create__data-body{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            &-title{
+                padding-bottom: 23px;
+            }
+            &__data-massage{
+                padding: 0 0 20px;
+            }
+            &-area{
+                height: 92px;
+                margin: 0 0 20px;
+            }
+        }
+    }
+    
 }
 // MAX-WIDTH 767.98PX breakpoints END
 
@@ -947,7 +1088,10 @@
         font-size: 12px;
         line-height: 14px;
     }
-
+    .h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
     // Шрифты конец
     .burger{
         width: 48px;
@@ -1002,6 +1146,89 @@
         &__instagram-img{
             width: 100px;
         }
+    }
+    .popup__gallery{
+        .slider{
+            width: 90%;
+        }
+        .popup__subtitle{
+            padding-bottom: 0;
+        }
+    }
+    .popup{
+        .create{
+            &-body{
+                padding: 33px 16px 0;
+            }
+            &__data-title{
+                font-size: 11px;
+                line-height: 16px;
+            }
+            &__data-checkBox{
+                .create__data-title{
+                    font-size: 10px;
+                    line-height: 14px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+        .select{
+            font-size: 12px;
+            line-height: 20px;
+            &__header{
+                padding: 9px 16px 11px 12px;
+            }
+            .icon{
+                font-size: 20px;
+            }
+            &-item{
+                padding: 9px 16px 11px 12px;
+            }
+        }
+        .checkBox input[type="checkbox"]:checked+label:before, 
+        input[type="checkbox"]:not(:checked)+label:before{
+            top: 2px;
+        }
+        .checkBox input[type="checkbox"]:checked+label:after, 
+        input[type="checkbox"]:not(:checked)+label:after{
+            top: 6px;
+        }
+    }
+    .popup__review{
+        &-body{
+            padding: 27px 32px 0;
+        }
+        &-title{
+            font-size: 14px;
+            line-height: 16px;
+            padding-bottom: 6px;
+        }
+        &-text{
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &-date{
+            display: block;
+            font-size: 10px;
+            line-height: 14px;
+            padding-top: 8px;
+        }
+    }
+    .createReview{
+        .create{
+            &-subtitle{
+                font-size: 11px;
+                line-height: 16px;
+                font-weight: 700;
+            }
+            &-area{
+                height: 208px;
+                margin: 16px 0 5px;
+            }
+        }
+    }
+    .createSubscribe{
+
     }
 }
 // MAX-WIDTH 576.98PX breakpoints END 

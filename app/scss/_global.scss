@@ -556,7 +556,6 @@ body {
 /*Чек бокс*/
 .checkBox{
 	box-sizing: content-box;
-	margin-top: 20px;
 }
 
 .checkBox input[type="checkbox"]:checked,
@@ -579,7 +578,7 @@ input[type="checkbox"]:not(:checked)+label:before {
 	content: "";
 	position: absolute;
 	left: 0px;
-	top: 0px;
+	top: 4px;
 	width: 16px;
 	height: 16px;
 	border: 1px solid $border;
@@ -599,7 +598,7 @@ input[type="checkbox"]:not(:checked)+label:after {
 .checkBox input[type="checkbox"]:checked+label:after,
 input[type="checkbox"]:not(:checked)+label:after {
 	left: 3px;
-	top: 4px;
+	top:8px;
 	width: 10px;
 	height: 5px;
 	border-radius: 1px;
