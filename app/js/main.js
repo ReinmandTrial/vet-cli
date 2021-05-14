@@ -139,6 +139,9 @@ $(function () {
       btn.addClass('active');
    })
    //skils end
+   //masked
+   $('#phone').inputmask("+7(999) 999-9999");
+   //masked end
 })
 // review slider
 var click = false;
