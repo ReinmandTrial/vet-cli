@@ -89,6 +89,26 @@ $(function () {
           }
        ]
     });
+      $('.schedule').each(function(){
+        $(this).find('.slider-main').slick({
+          infinite: false,
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          arrows: true,
+          asNavFor: $(this).find('.slider-second'),
+          dots: false,
+          draggable:false
+        });
+        $(this).find('.slider-second').slick({
+          infinite: false,
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          arrows: false,
+          asNavFor: $(this).find('.slider-main'),
+          dots: false,
+          draggable:false
+        })
+    })
     $('.slick-next').html('<span class="icon icon-angle-right"></span>');
     $('.slick-prev').html('<span class="icon icon-angle-left"></span>');
    //  Слайдер конец 
