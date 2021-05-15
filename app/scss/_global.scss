@@ -110,6 +110,11 @@ body {
 		&:hover{
 			color: $accent;
 		}
+		span{
+			&:not(:first-child){
+				display: none;
+			}
+		}
 	}
 }
 

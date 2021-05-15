@@ -24,7 +24,7 @@ $(function () {
             }
          },
          {
-            breakpoint: 767,
+            breakpoint: 768,
             settings:{
                arrows: false,
                slidesToShow: 3
@@ -89,7 +89,7 @@ $(function () {
           }
        ]
     });
-      $('.schedule').each(function(){
+      $('.schedule, .employeeSchedule').each(function(){
         $(this).find('.slider-main').slick({
           infinite: false,
           slidesToShow: 7,
@@ -120,11 +120,6 @@ $(function () {
    })
    //burger menu end
    //masonry start
-   $('.priceBlock__list').masonry({
-      itemSelector: '.priceBlock__item',
-      columnWidth: '.priceBlock__item',
-      // gutter: 40
-   });
    $(window).on("load resize",(function(){
       if($(window).width()<"1200"){
          $('.priceBlock__list').masonry({gutter: 20 });
@@ -134,6 +129,15 @@ $(function () {
          $('.employee__body').find('.employee__more, .skills__content, img').wrapAll('<div class="employee__img">');
       }else{ 
          $('.priceBlock__list').masonry({gutter: 40 });
+      }
+      if($(window).width()>"767"){
+         $('.priceBlock__list').masonry({
+            itemSelector: '.priceBlock__item',
+            columnWidth: '.priceBlock__item',
+            // gutter: 40
+         });
+      }else{
+         $('.priceBlock__list').masonry('destroy');
       }
    }));
    //masonry end

@@ -1246,6 +1246,26 @@
         padding-top: 3px;
         padding-left: 16px;
     }
+    .slider-main{
+        .slick-arrow{
+            width: 40px;
+            height: 96px;
+            position: absolute;
+            top: -16px;
+            background: transparent;
+            border-radius: 0;
+            border: 0;
+            padding: 0;
+            color: $text1;
+            font-size: 26px;
+            .slick-next{
+                right: -40px;
+            }
+            .slick-prev{
+                left: -40px;
+            }
+        }
+    }
 }
 
 .schedule{

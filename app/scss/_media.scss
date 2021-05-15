@@ -853,8 +853,8 @@
             }
         }
         .slick{
-            margin: 0 -29px;
-            width: 750px;
+            margin: 0;
+            width: 100%;
         }
     }
     .popup__gallery{
@@ -862,13 +862,33 @@
             right: 36px;
         }
     }
+    .employeeSchedule{
+        .schedule{
+            &__slider-list{
+                width: 100%;
+            }
+        }
+    }
+
 }
 // MAX-WIDTH 991.98PX breakpoints END
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
-    // fonts 
-    //fonts end
+    // Шрифты 
+    .mini-text{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .h3{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    // Шрифты конец
     .footer{
         &__copyright{
             flex-wrap: wrap;
@@ -916,6 +936,10 @@
                 font-size: 11px;
                 line-height: 16px;
             }
+        }
+        .slick{
+            margin: 0 -29px;
+            width: 750px;
         }
     }
     .stories{
@@ -1077,22 +1101,127 @@
             }
         }
     }
-    
+    .service-popular{
+        margin: -4px;
+        &__item{
+            width: calc(50% - 8px);
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            margin: 4px;
+        }
+        &__img{
+            width: 32px;
+            height: 32px;
+            margin-right: 4px;
+        }
+        &__title{
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    .service-all{
+        padding-bottom: 50px;
+        &__list{
+            grid-template-columns: 1fr 1fr;
+            margin: -4px;
+        }
+        &__item{
+            margin: 4px;
+            a{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    .serviceDescription{
+        padding-top: 19px;
+        &__content{
+            padding-bottom: 39px;
+        }
+        &__button{
+            display: none;
+        }
+    }
+    .servicePrice{
+        padding-bottom: 55px;
+        &__content{
+            display: block;
+        }
+        .card__price{
+            width: 100%;
+        }
+        &__info{
+            width: 100%;
+            padding-top: 21px;
+        }
+    }
+    .specialists{
+        &--choice{
+            padding-bottom: 14px;
+            .specialists__slider--choice{
+                padding-top: 24px;
+            }
+        }
+        &__haeder--choice{
+            .specialists__title{
+                padding-bottom: 12px;
+            }
+        }    
+    }
+    .priceBlock{
+        &__item{
+            width: 100%;
+        }
+    }
+    .employee-info{
+        &__content{
+            display: block;
+        }
+        .card__price{
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+        &__description{
+            margin-right: 0;
+            margin-left: auto;
+            max-width: unset;
+            width: calc(100% - 55px);
+        }
+    }
+    .employee__review-Block{
+        .reviewBlock__title{
+            width: unset;
+        }
+    }
+    .gallery-main{
+        &__content{
+            display: block;
+        }
+        .card__clinic{
+            width: 536px;
+            margin-right: auto;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .reviewBlock{
+        &__header{
+            display: block;
+        }
+        &__title{
+            width: 100%;
+            max-width: unset;
+        }
+    }
 }
 // MAX-WIDTH 767.98PX breakpoints END
 
 // MAX-WIDTH 576.98PX breakpoints START 
 @media (max-width: 575.98px) {
-    // Шрифты 
-    .mini-text{
-        font-size: 12px;
-        line-height: 14px;
-    }
-    .h2{
-        font-size: 24px;
-        line-height: 28px;
-    }
-    // Шрифты конец
     .burger{
         width: 48px;
         height: 48px;
@@ -1227,8 +1356,110 @@
             }
         }
     }
-    .createSubscribe{
-
+    .service-all{
+        &__list{
+            grid-template-columns: 1fr;
+        }
+    }
+    .servicePrice{
+        &__info{
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    .card__price{
+        padding: 20px 16px 17px;
+        &-header{
+            margin-bottom: 7px;
+        }
+        &-title{
+            font-size: 20px;
+            line-height: 24px;
+            padding-bottom: 3px;
+        }
+        &-info{
+            font-size: 10px;
+            line-height: 14px;
+            padding-bottom: 8px;
+        }
+        &-item{
+            font-size: 12px;
+            line-height: 16px;
+            &:not(:last-child){
+                padding-bottom: 8px;
+            }
+        }
+        &-name{
+            width: 242px;
+        }
+    }
+    .switch{
+        &__item{
+            span{
+                &:first-child{
+                    display: none;
+                }
+            }
+            span{
+                &:not(:first-child){
+                    display: block;
+                }
+            }
+        }
+    }
+    .gallery-main{
+        .card__clinic{
+            width: 328px;
+            height: 156px;
+            &-img{
+                width: 156px;
+            }
+            &-content{
+                padding: 19px 16px;
+                width: 172px;
+            }
+            &-title{
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &-adress{
+                font-size: 10px;
+                line-height: 14px;
+                .icon{
+                    font-size: 16px;
+                }
+            }
+            &-more{
+                font-size: 10px;
+                line-height: 14px;
+                .icon{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .reviewBlock{
+        .card__review{
+            padding: 19px 16px;
+        }
+    }
+    .storiesBlock{
+        &__item{
+            margin-bottom: 53px;
+            &:nth-child(1n + 1){
+                width: 100%;
+            }
+            &:nth-child(1n + 1){
+                margin-right: 0;
+            }
+        }
+    }
+    .searchBlock{
+        padding: 24px 16px;
+        height: fit-content;
+        width: calc(100% + 30px);
+        margin: -15px;
+        border-radius: 0;
     }
 }
 // MAX-WIDTH 576.98PX breakpoints END 
