@@ -818,7 +818,8 @@
     &__header{
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        // align-items: start;
+        align-items: center;
         padding-bottom: 40px;
     }
     &__title{

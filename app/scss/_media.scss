@@ -807,6 +807,24 @@
 
 // MAX-WIDTH 991.98PX breakpoints START
 @media (max-width: 991.98px) {
+    .btn {
+        span {
+            &:first-child {
+                display: none;
+            }
+            &:not(:first-child) {
+                display: block;
+            }
+        }
+    }
+    .breadcrumbs {
+        &__prev {
+            display: block;
+        }
+        &__item {
+            display: none;
+        }
+    }
     .wrapper{
         &.open{
             .sidebar{
@@ -972,26 +990,107 @@
             padding: 0px 0px 23px;
         }
     }
-
+    .skills {
+        margin-bottom: 48px;
+    }
+    .our-specialists {
+        margin-bottom: 64px;
+        &__content {
+            grid-row-gap: 56px 
+        }
+    }
+    .employee {
+        &__review-Block {
+            .reviewBlock__header {
+                padding-bottom: 24px;
+            }
+        }
+    }
+    .reviewBlock__item {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        &:last-child {
+            margin-bottom: 56px;
+        }
+    }
+    .location {
+        &__number-description {
+            margin-bottom: 11px;
+        }
+        .switch {
+            margin-bottom: 19px;
+        }
+        &__name {
+            margin-bottom: 9px;
+        }
+        &__address {
+            margin-bottom: 9px;
+        }
+    }
+    .page-header--green {
+        padding: 41px 0px 28px;
+        .switch {
+            margin-top: 19px;
+        }
+    }
+    .storiesBlock {
+        padding: 32px 0px 7px;
+    }
+    .missionBlock {
+        padding-top: 29px;
+        padding-bottom: 32px;
+    }
+    .missionBlock__slider-header {
+        padding-top: 43px;
+        padding-bottom: 4px;
+    }
+    .reviewBlock {
+        padding: 24px 0px 0px;
+    }
+    .searchBlock {
+        height: unset;
+        padding: 24px 16px;
+    }
+    .searchContent__count {
+        margin-top: 13px;
+    }
+    .service{
+        &Description {
+            padding-top: 19px;
+        }
+        &Description__content {
+            padding-bottom: 39px;
+        }
+        &Price {
+            padding-bottom: 55px;
+        }
+    }
+    .specialists {
+        padding-bottom: 30px;
+    }
 }
 // MAX-WIDTH 991.98PX breakpoints END
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
     // Шрифты 
-    .mini-text{
-        font-size: 12px;
-        line-height: 14px;
-    }
-    .h2{
-        font-size: 24px;
-        line-height: 28px;
-    }
-    .h3{
-        font-size: 20px;
-        line-height: 24px;
-    }
+    // .mini-text{
+    //     font-size: 12px;
+    //     line-height: 14px;
+    // }
+    // .h2{
+    //     font-size: 24px;
+    //     line-height: 28px;
+    // }
+    // .h3{
+    //     font-size: 20px;
+    //     line-height: 24px;
+    // }
     // Шрифты конец
+    .btn {
+        padding: 11px 24px 13px;
+    }
     .footer{
         &__copyright{
             flex-wrap: wrap;
@@ -1224,6 +1323,7 @@
         }
     }
     .service-all{
+        padding-top: 43px;
         padding-bottom: 50px;
         &__list{
             grid-template-columns: 1fr 1fr;
@@ -1235,6 +1335,9 @@
                 font-size: 16px;
                 line-height: 24px;
             }
+        }
+        &__title {
+            padding-bottom: 19px;
         }
     }
     .serviceDescription{
@@ -1374,6 +1477,46 @@
             &:not(:first-child) {
                 margin-top: 16px;
             }
+        }
+    }
+    .card { 
+        &__skills {
+            padding: 7px 8px 9px 8px;
+        }
+    }
+    .top-page--priceService {
+        margin-bottom: 19px;
+    }
+    .skills {
+        &--priceService {
+            margin-bottom: 32px;
+        }
+    }
+    .priceBlock  {
+        padding-top: 32px;
+        padding-bottom: 30px;
+    }
+    .our-specialists {
+        &__content {
+            grid-template-columns: 1fr;
+        }
+    }
+    .employee {
+        &__body {
+            .btn-createSubscribe {
+                display: none;
+            }
+        }
+        &__review-Block {
+            .reviewBlock__header {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .reviewBlock {
+        .subtitle {
+            margin-bottom: 19px;
         }
     }
 }
@@ -1619,6 +1762,68 @@
         width: calc(100% + 30px);
         margin: -15px;
         border-radius: 0;
+    }
+    .card {
+        &__specialist{
+            width: 328px;
+        }
+    }
+    .inst {
+        &__block {
+            width: 328px;
+            height: 328px;
+        }
+        &__big {
+            width: 219px;
+            height: 219px;
+        }
+        &__little {
+            width: 108px;
+            height: 108px;
+        }
+    }
+    .review__title {
+        padding-bottom: calc(120px + (182 - 120) * ((100vw - 360px) / (576 - 360)));
+    }
+    .popular {
+        margin-left: 5px;
+        &__header {
+            padding-bottom: 3px;
+        }
+    }
+    .stories {
+        &__footer-img {
+            height: unset;
+            img{
+                height: unset;
+                width: 100%;
+            }
+        }
+    }
+    .desctop {
+        display: flex;
+        flex-wrap: wrap;
+        .container {
+            order: 2;
+        }
+        &__img {
+            height: 280px;
+            position: relative;
+            order: 1;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                object-fit: unset;
+                max-width: unset;
+            }
+        }
+        &__content {
+            border-bottom: 1px solid $border;
+        }
+        &__title {
+        }
     }
 }
 // MAX-WIDTH 576.98PX breakpoints END 

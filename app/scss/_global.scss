@@ -51,6 +51,17 @@ body {
 .breadcrumbs {
 	margin: 57px 0px 5px 0px;
 	display: flex;
+	&__prev {
+		color: $accent;
+		display: none;
+	}
+	&__prev-link {
+		align-items:center;
+		display: flex;
+		span {
+			margin-right: 6px;
+		}
+	}
 	&__item {
 		display: flex;
 		align-items: center;

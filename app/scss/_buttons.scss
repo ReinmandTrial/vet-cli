@@ -8,6 +8,14 @@
     padding: 8px 22px 10px;
     transition: 0.5s;
     cursor: pointer;
+    span {
+        &:first-child {
+            display: block;
+        }
+        &:not(:first-child) {
+            display: none;
+        }
+    }
     &-primary {
         background: $accentRed;
         &:hover {
