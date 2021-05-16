@@ -1247,25 +1247,29 @@
         padding-top: 3px;
         padding-left: 16px;
     }
-    .slider-main{
-        .slick-arrow{
-            width: 40px;
-            height: 96px;
-            position: absolute;
-            top: -16px;
-            background: transparent;
-            border-radius: 0;
-            border: 0;
-            padding: 0;
-            color: $text1;
-            font-size: 26px;
-            .slick-next{
-                right: -40px;
-            }
-            .slick-prev{
-                left: -40px;
-            }
+}
+.slider-main,
+.slider-second{
+    .slick-arrow{
+        width: 40px;
+        height: 96px;
+        position: absolute;
+        top: -16px;
+        background: transparent;
+        border-radius: 0;
+        border: 0;
+        padding: 0;
+        color: $text1;
+        font-size: 26px;
+        .slick-next{
+            right: -40px;
         }
+        .slick-prev{
+            left: -40px;
+        }
+    }
+    .slick-slide{
+        margin: 0;
     }
 }
 
@@ -1278,7 +1282,8 @@
     }
     &__header{
         display: flex;
-        width: 100%;
+        // width: 100%;
+        width:max-content;
         padding-bottom: 16px;
         align-items: start;
         position: relative;
@@ -1289,7 +1294,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            width:  100%;
+            width:  calc(100% + 40px);
             height: 1px;
             background: $border;
         }
@@ -1306,17 +1311,14 @@
         font-weight: 700;
     }
     &__slider{
-        flex: 1 0 auto;
+        width: 768px;
+        // flex: 1 0 auto;
     }
     &__slider-list{
-        width: 768px;
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        position: relative;
+        width: 100%;
     }
     &__slider-item{
-        width: 96px;
+        flex-basis: 96px;
     }
     .h6{
         padding-bottom: 6px;
@@ -1348,8 +1350,6 @@
         padding-right: 50px;
     }
     &__body-clock{
-        font-size: 16px;
-        line-height: 24px;
         letter-spacing: -0.05em;
     }
     .slider-main{

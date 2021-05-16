@@ -97,7 +97,36 @@ $(function () {
           arrows: true,
           asNavFor: $(this).find('.slider-second'),
           dots: false,
-          draggable:false
+          draggable:false,
+          responsive:[
+            {
+               breakpoint:1300,
+               settings:{
+                  slidesToShow:6
+               }
+            },
+            {
+               breakpoint:1150,
+               settings:{
+                  slidesToShow:5
+               }
+            },
+            {
+               breakpoint:1000,
+               settings:{
+                  slidesToShow:4
+               }
+            },
+            {
+               breakpoint:991,
+               settings:{
+                  slidesToShow:7,
+                  draggable:true,
+                  arrows:false,
+                  touchMove:false
+               }
+            }
+          ]
         });
         $(this).find('.slider-second').slick({
           infinite: false,
@@ -106,7 +135,35 @@ $(function () {
           arrows: false,
           asNavFor: $(this).find('.slider-main'),
           dots: false,
-          draggable:false
+          draggable:false,
+          responsive:[
+            {
+               breakpoint:1300,
+               settings:{
+                  slidesToShow:6
+               }
+            },
+            {
+               breakpoint:1150,
+               settings:{
+                  slidesToShow:5
+               }
+            },
+            {
+               breakpoint:1000,
+               settings:{
+                  slidesToShow:4
+               }
+            },
+            {
+               breakpoint:991,
+               settings:{
+                  slidesToShow:7,
+                  touchMove:false,
+                  swipe:false
+               }
+            }
+          ]
         })
     })
     $('.slick-next').html('<span class="icon icon-angle-right"></span>');

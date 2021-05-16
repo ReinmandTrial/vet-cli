@@ -178,6 +178,35 @@
 }
 
 // MAX-WIDTH 1600PX breakpoints END
+//slider madia
+@media(max-width:1500px){
+    // .schedule{
+        .schedule__slider{
+            width: calc(400px + (768 - 400) * ((100vw - 992px) / (1500 - 992)));
+        }
+        .schedule__body-title,
+        .schedule__title{
+            padding: 0;
+            width: 280px;
+        }
+    // }
+    // .employeeSchedule{
+    //     .schedule__title{
+    //         padding-bottom: 15px;
+    //     }
+    //     .schedule__slider{
+    //         margin-left: 50px;
+    //     }
+    //     .schedule__header {
+    //         display: block;
+    //     }
+    //     .schedule__body-title{
+    //         width: unset;
+    //         padding-right: 0;
+    //     }
+    // }
+}
+//slider media end
 
 // MAX-WIDTH 1399.98PX breakpoints START
 @media (max-width: 1399.98px) {
@@ -315,34 +344,6 @@
                 width: calc(50% - 5px);
                 padding: 20px 16px;
             }
-        }
-    }
-    .employeeSchedule {
-        padding-top: 34px;
-        .schedule__header {
-            display: block;
-            .icon {
-                margin-right: 7px;
-            }
-        }
-        .schedule__body-head {
-            display: block;
-        }
-        .schedule__header {
-            .schedule__slider {
-                margin: 0px 35px;
-            }
-        }
-        .schedule__body-title {
-            width: unset;
-            padding-right: 50px;
-        }
-        .schedule__slider {
-            margin: 0px 35px;
-
-        }
-        .schedule__title { 
-            margin-bottom: 18px;
         }
     }
     .reviewBlock {
@@ -749,6 +750,11 @@
             width: 700px;
         }
     }
+    // .employeeSchedule{
+    //     .schedule__slider{
+    //         width: calc(620px + (768 - 620) * ((100vw - 992px) / (1200 - 992)));
+    //     }
+    // }
 } 
 // MAX-WIDTH 1199.98PX breakpoints END
 
@@ -784,7 +790,7 @@
         line-height: calc(24px + (36 - 24) * ((100vw - 360px) / (1142 - 360)));
     }
     .text2 {
-        font-size: calc(12px + (16px - 12) * ((100vw - 360px) / (1142 - 360)));
+        font-size: calc(12px + (16 - 12) * ((100vw - 360px) / (1142 - 360)));
         line-height: calc(16px + (24 - 16) * ((100vw - 360px) / (1142 - 360)));
     }
     .table-text {
@@ -1069,25 +1075,26 @@
     .specialists {
         padding-bottom: 30px;
     }
+    .schedule,
+    .employeeSchedule{
+        .container{
+            max-width: unset;
+            width: max-content;
+        }
+        &__slider{
+            width: calc(480px + (720 - 480) * ((100vw - 320px) / (991 - 320)));
+        }
+        &__body-title,
+        &__title{
+            width: calc(172px + (280 - 172) * ((100vw - 320px) / (991 - 320))) !important;
+            padding-right: 16px !important;
+        }
+    }
 }
 // MAX-WIDTH 991.98PX breakpoints END
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
-    // Шрифты 
-    // .mini-text{
-    //     font-size: 12px;
-    //     line-height: 14px;
-    // }
-    // .h2{
-    //     font-size: 24px;
-    //     line-height: 28px;
-    // }
-    // .h3{
-    //     font-size: 20px;
-    //     line-height: 24px;
-    // }
-    // Шрифты конец
     .btn {
         padding: 11px 24px 13px;
     }
@@ -1446,14 +1453,11 @@
         &__slide {
             width: max-content;
             height: max-content;
-            // right: calc(400px - (400 + 0) * ((100vw - 360px) / (737 - 360)));
             
         }
         &__slide-img {
             width: calc(264px + (438 - 264) * ((100vw - 360px) / (767 - 360)));
             height: calc(264px + (438 - 264) * ((100vw - 360px) / (767 - 360)));
-            // width: 264px;
-            // height: 264px;
         }
         &__info {
             padding-top:  calc(15px + (45 - 15) * ((100vw - 576px) / (767 - 576)));
@@ -1823,6 +1827,20 @@
             border-bottom: 1px solid $border;
         }
         &__title {
+        }
+    }
+    .employeeSchedule{
+        .schedule{
+            &__header,
+            &__body-head{
+                display: block;
+            }
+            &__slider{
+                margin-left: 5px;
+            }
+            &__title{
+                padding-bottom: 18px;
+            }
         }
     }
 }
